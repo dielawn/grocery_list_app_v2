@@ -1,15 +1,12 @@
 import './App.css'
-import { dillonsBreakfastIngredients } from './recipes'
+import Recipes from './Recipes'
 
 function App() {
   
 
   return (
     <div>
-      
-      {dillonsBreakfastIngredients.map(ingredient => (
-        <p key={ingredient.name}>{ingredient.name}</p>
-      ))}
+      <Recipes />
     </div>
   )
 }
