@@ -7,7 +7,8 @@ export function GroceryList({groceryList}) {
             <h3>Grocery List</h3>
             {groceryList.map((item, index) => (
                 <div  key={index} className='flex alignRight'>
-                    <p>{item.qty} {item.unit} {item.name}</p>
+                    <p className='alignLeft'>{item.qty} {item.unit}</p>
+                    <p className='alignRight'>{item.name}</p>
                     <button>❌</button>
                 </div>
             ))}
