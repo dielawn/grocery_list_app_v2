@@ -48,7 +48,7 @@ const recipes = [
     },
     {
         name: 'Costco',
-        ingredients: [],
+        ingredients: ['Toilet Paper', 'Paper Towels', ],
         image: './src/assets/costco-logo.png',
         instructions: 'instructions/',
         link: ''
