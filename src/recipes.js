@@ -49,7 +49,7 @@ const recipes = [
     {
         name: 'Costco',
         ingredients: [],
-        image: './src/assets/',
+        image: './src/assets/costco-logo.png',
         instructions: 'instructions/',
         link: ''
     },
