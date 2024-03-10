@@ -17,7 +17,29 @@ export function GroceryList() {
         const [groceryList, setGroceryList] = useState([])
         const [recipeList, setRecipeList] = useState([])
 
-       
+       function addToLists(recipeName) {
+        addToGroceryList(groceryList)
+        addToRecipeList(recipeName)
+       }
+
+       function addToRecipeList(newRecipe) {
+        const newList = [...recipeList, newRecipe]
+        setRecipeList(newList)
+       }
+
+       function addToGroceryList(groceryList) {
+        const consolidatedList = {}
+        groceryList.forEach((item) => {
+            const key = `${item.unit} ${item.name}`;
+            if (key in consolidatedList) {
+                consolidatedList[key].qty += item.qty;
+            } else {
+                consolidatedList[key] = {...item};
+            }
+        })
+        const finalList = Object.values(consolidatedList)
+        setGroceryList(finalList)
+       }
 
 
     return (
