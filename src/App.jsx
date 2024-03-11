@@ -9,11 +9,28 @@ function App() {
   const [recipeList, setRecipeList] = useState([])
   const [servingSize, setServingSize] = useState(2)
   const [isRecipeListVis, setIsRecipeListVis] = useState(true)
+  const [isMenuVis, setIsMenuVis] = useState(false)
 
-  function toggleVis() {
-    setIsRecipeListVis(!isRecipeListVis)
+  function toggleVis(el) {
+    switch(el) {
+      case 'menu':
+        setIsMenuVis(!isMenuVis)
+        break;
+      case 'list':
+        setIsRecipeListVis(!isRecipeListVis)
+        break;
+      default:
+        setIsMenuVis(false)
+        setIsRecipeListVis(true)
+    }
+    // if (isMenu) {
+    //   setIsMenuVis(!isMenuVis)
+    // } else {
+    //   setIsRecipeListVis(!isRecipeListVis)
+    // }
+    
   }
-
+  
 
   function addToRecipeList(newRecipe) {
     const newList = [...recipeList, newRecipe]
@@ -50,6 +67,12 @@ function App() {
     addToRecipeList(recipeName)
    }
 
+   function deleteList() {
+    setGroceryList([])
+    setRecipeList([])
+    localStorage.clear()
+   }
+
    useEffect(() => {
     let loadedGroceryList = []
     for (let i = 0; true; i++) {
@@ -81,7 +104,7 @@ function App() {
       <button><span className="material-symbols-outlined">menu</span></button>
         <button><span className="material-symbols-outlined">picture_as_pdf</span></button>        
         <button><span className="material-symbols-outlined">share</span></button>
-        <button><span className="material-symbols-outlined">delete</span></button>
+        <button onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
         
       </div>
    {isRecipeListVis ? (
@@ -106,7 +129,7 @@ function App() {
    </div>
    )}
 
-<button className='flex visBtn' onClick={() => toggleVis()}>{isRecipeListVis ? 'Grocery List' : 'Recipes'} </button>
+<button className='flex visBtn' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'Grocery List' : 'Recipes'} </button>
 
     </div>
   )
