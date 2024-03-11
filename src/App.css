@@ -10,20 +10,23 @@
   border-radius: 5px;
 }
 
-
+.listsDiv {
+  position: relative;
+}
 
 .recipeDiv {
   position: relative;
   overflow: scroll; 
   overflow-x: hidden;
+  top: 100px;
 }
 
 .groceryListDiv {
   position: relative; 
+  top: 100px;
   margin: 50px;
-  min-width: 80vw;
+  
   overflow: scroll;
-  overflow-x: hidden;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.968);
   border-radius: 10px;
 
@@ -32,6 +35,7 @@
 .flex {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .recipeCard {  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.968);
@@ -41,12 +45,14 @@
 }
 
 .menuDiv {
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: 20px;
   background-color: rgba(245, 245, 245, 0.808);
   width: 100%;
   z-index: 999;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .alignRight {
@@ -56,7 +62,16 @@
 
 .alignLeft {
   text-align: left;
-  width: 50%;
+  width: 60%;
   padding-left: 25px;
-  width: 100%;
+}
+
+.visBtn {
+  position: fixed;
+  bottom: 50px;
+  left: 75%;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  font-size: .9rem;
 }

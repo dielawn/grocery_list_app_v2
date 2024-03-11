@@ -60,7 +60,7 @@ function App() {
   return (
 <div className='listsDiv'>
       <div className='menuDiv'>
-        <button className='flex' onClick={() => toggleVis()}><span className="material-symbols-outlined">visibility</span>{isRecipeListVis ? ' Grocery List' : ' Recipe List'} </button>
+       
       <button><span className="material-symbols-outlined">menu</span></button>
         <button><span className="material-symbols-outlined">picture_as_pdf</span></button>        
         <button><span className="material-symbols-outlined">share</span></button>
@@ -84,12 +84,13 @@ function App() {
        ))}
      </div>
    ) : (
-    <div>
-    <GroceryList groceryList={groceryList} />
+    <div className='groceryListDiv'>
+    <GroceryList groceryList={groceryList} setGrocerList={setGroceryList} />
    </div>
    )}
 
-   
+<button className='flex visBtn' onClick={() => toggleVis()}>{isRecipeListVis ? 'Grocery List' : 'Recipes'} </button>
+
     </div>
   )
 }

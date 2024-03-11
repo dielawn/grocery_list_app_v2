@@ -1,15 +1,21 @@
 import { useState } from 'react';
 
-export function GroceryList({groceryList}) {
+export function GroceryList({groceryList, setGrocerList}) {
+
+    function removeItem(itemName) {
+        //create a new array excluding itemName
+        const newList = groceryList.filter(item => item.name !== itemName)
+        setGrocerList(newList)
+    }
      
     return (
-        <div className='groceryListDiv'>
+        <div >
             <h3>Grocery List</h3>
             {groceryList.map((item, index) => (
                 <div  key={index} className='flex alignRight'>
                     <p className='alignLeft'>{item.qty} {item.unit}</p>
                     <p className='alignRight'>{item.name}</p>
-                    <button>❌</button>
+                    <button onClick={() => removeItem(item.name)}>❌</button>
                 </div>
             ))}
         </div>
