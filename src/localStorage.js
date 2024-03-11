@@ -1,5 +1,5 @@
-function saveToLocalStorage(groceryList, recipeList) {
-    // clearLocalStorage()
+export default function saveToLocalStorage(groceryList, recipeList) {
+    localStorage.clear()
     groceryList.forEach((item, index) => {
         let itemKey = `ingredient${index}`;
         let itemValue = JSON.stringify({

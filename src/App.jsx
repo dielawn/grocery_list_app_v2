@@ -2,6 +2,7 @@ import './App.css'
 import { GroceryList } from './GroceryList'
 import { useEffect, useState } from 'react'
 import recipes from './recipes'
+import saveToLocalStorage from './localStorage'
 
 function App() {
   const [groceryList, setGroceryList] = useState([]) 
@@ -50,12 +51,28 @@ function App() {
    }
 
    useEffect(() => {
-  
-   }, [recipeList])
+    let loadedGroceryList = []
+    for (let i = 0; true; i++) {
+      const itemValue = localStorage.getItem(`ingredient${i}`)
+      if (!itemValue) break;
+      loadedGroceryList.push(JSON.parse(itemValue))
+    }
+
+    let loadedRecipeList = []
+    for (let i = 0; true; i++) {
+      const itemValue = localStorage.getItem(`recipe${i}`)
+      if (!itemValue) break;
+      loadedRecipeList.push(JSON.parse(itemValue))
+    }
+
+    if (loadedGroceryList.length > 0) setGroceryList(loadedGroceryList)
+    if (loadedRecipeList.length > 0) setRecipeList(loadedRecipeList)
+   }, [])
+
 
    useEffect(() => {
-    console.log(groceryList)
-   }, [groceryList])
+    saveToLocalStorage(groceryList, recipeList)
+   }, [groceryList, recipeList])
 
   return (
 <div className='listsDiv'>
