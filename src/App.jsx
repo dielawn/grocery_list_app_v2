@@ -3,6 +3,7 @@ import { GroceryList } from './GroceryList'
 import { useEffect, useState } from 'react'
 import recipes from './recipes'
 import saveToLocalStorage from './localStorage'
+import { ServingSizeSelect } from './ServingSelect'
 
 function App() {
   const [groceryList, setGroceryList] = useState([]) 
@@ -95,7 +96,7 @@ function App() {
   return (
 <div className='listsDiv'>
       <div className='menuDiv'>
-       
+       <ServingSizeSelect setServingSize={setServingSize} servingSize={servingSize} />
       <button><span className="material-symbols-outlined">menu</span></button>
         <button><span className="material-symbols-outlined">picture_as_pdf</span></button>        
         <button><span className="material-symbols-outlined">share</span></button>
