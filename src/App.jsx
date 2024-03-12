@@ -22,13 +22,7 @@ function App() {
       default:
         setIsMenuVis(false)
         setIsRecipeListVis(true)
-    }
-    // if (isMenu) {
-    //   setIsMenuVis(!isMenuVis)
-    // } else {
-    //   setIsRecipeListVis(!isRecipeListVis)
-    // }
-    
+    }    
   }
   
 
@@ -50,10 +44,11 @@ function App() {
     //add ingredient or update qty in consolidated list
     recipeIngredients.forEach(ingredient => {
         const key = `${ingredient.unit} ${ingredient.name}`
+        const adjustedQty = ingredient.qty * servingSize
         if (key in consolidatedList) {
-            consolidatedList[key].qty += ingredient.qty
+            consolidatedList[key].qty += adjustedQty
         } else {
-            consolidatedList[key] = {...ingredient}
+          consolidatedList[key] = {...ingredient, qty: adjustedQty}
         }
     })
 
