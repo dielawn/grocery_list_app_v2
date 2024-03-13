@@ -58,6 +58,10 @@ function App() {
     setGroceryList(finalList)
    }
 
+// useEffect(() => {
+//   addAndConsolidate(groceryList)
+// }, [servingSize])
+
    function addToLists(recipeIngredients, recipeName) {
     addAndConsolidate(recipeIngredients)
     addToRecipeList(recipeName)
