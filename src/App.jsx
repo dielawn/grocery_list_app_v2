@@ -45,11 +45,10 @@ function App() {
     //add ingredient or update qty in consolidated list
     recipeIngredients.forEach(ingredient => {
         const key = `${ingredient.unit} ${ingredient.name}`
-        const adjustedQty = ingredient.qty * servingSize
         if (key in consolidatedList) {
-            consolidatedList[key].qty += adjustedQty
+            consolidatedList[key].qty += ingredient.qty
         } else {
-          consolidatedList[key] = {...ingredient, qty: adjustedQty}
+          consolidatedList[key] = {...ingredient}
         }
     })
 
@@ -58,9 +57,9 @@ function App() {
     setGroceryList(finalList)
    }
 
-// useEffect(() => {
-//   addAndConsolidate(groceryList)
-// }, [servingSize])
+
+
+
 
    function addToLists(recipeIngredients, recipeName) {
     addAndConsolidate(recipeIngredients)
