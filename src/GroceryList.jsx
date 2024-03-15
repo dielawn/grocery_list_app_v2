@@ -13,7 +13,7 @@ export function GroceryList({groceryList, setGrocerList}) {
             <h3>Grocery List</h3>
             {groceryList.map((item, index) => (
                 <div  key={index} className='flex alignRight'>
-                    <p className='alignLeft'>{item.qty} {item.unit}</p>
+                    <p className='alignLeft'>{parseFloat(item.qty.toFixed(2))} {item.unit}</p>
                     <p className='alignRight'>{item.name}</p>
                     <button onClick={() => removeItem(item.name)}>❌</button>
                 </div>

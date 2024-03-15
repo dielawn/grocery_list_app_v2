@@ -101,13 +101,14 @@ function App() {
 
   return (
 <div className='listsDiv'>
-      <div className='menuDiv'>
-       <ServingSizeSelect setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
-      <button><span className="material-symbols-outlined">menu</span></button>
-        <button><span className="material-symbols-outlined">picture_as_pdf</span></button>        
-        <button><span className="material-symbols-outlined">share</span></button>
-        <button onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
-        
+      <div className='navDiv'>
+      <button onClick={() => toggleVis('menu')} className='menuBtn'><span className="material-symbols-outlined">menu</span></button>
+        {isMenuVis && <div className="menuDiv">
+          <ServingSizeSelect  className='menuItem' setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
+          <button className='menuItem' ><span className="material-symbols-outlined">picture_as_pdf</span></button>        
+          <button className='menuItem'><span className="material-symbols-outlined">share</span></button>
+          <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
+        </div>           }    
       </div>
    {isRecipeListVis ? (
      <div className='recipeDiv'>
