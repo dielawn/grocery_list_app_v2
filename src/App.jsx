@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react'
 import recipes from './recipes'
 import saveToLocalStorage from './localStorage'
 import { ServingSizeSelect } from './ServingSelect'
+import { SelectedRecipeList } from './RecipeList'
+
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import { GeneratePDF } from './GeneratePDF';
 
 function App() {
   const [groceryList, setGroceryList] = useState([]) 
@@ -105,7 +109,15 @@ function App() {
       <button onClick={() => toggleVis('menu')} className='menuBtn'><span className="material-symbols-outlined">menu</span></button>
         {isMenuVis && <div className="menuDiv">
           <ServingSizeSelect  className='menuItem' setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
-          <button className='menuItem' ><span className="material-symbols-outlined">picture_as_pdf</span></button>        
+          {groceryList.length > 0  && 
+            <PDFDownloadLink
+              document={<GeneratePDF groceryList={groceryList} recipeList={recipeList} />}
+              fileName="grocery-and-recipes.pdf">
+              {({ blob, url, loading, error }) =>
+                  loading ? 'Loading document...' : 'Download PDF!'
+              }
+            </PDFDownloadLink>
+          }
           <button className='menuItem'><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
         </div>           }    
@@ -128,7 +140,8 @@ function App() {
      </div>
    ) : (
     <div className='groceryListDiv'>
-    <GroceryList groceryList={groceryList} setGrocerList={setGroceryList} />
+      <SelectedRecipeList recipeList={recipeList} />
+    <GroceryList groceryList={groceryList} setGroceryList={setGroceryList} />
    </div>
    )}
 
