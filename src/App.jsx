@@ -44,13 +44,16 @@ function App() {
 
     //add ingredient or update qty in consolidated list
     recipeIngredients.forEach(ingredient => {
-        const key = `${ingredient.unit} ${ingredient.name}`
-        if (key in consolidatedList) {
-            consolidatedList[key].qty += ingredient.qty
-        } else {
-          consolidatedList[key] = {...ingredient}
-        }
-    })
+      const key = `${ingredient.unit} ${ingredient.name}`
+      const adjustedQty = ingredient.qty * servingSize
+      if (key in consolidatedList) {
+        // If the ingredient is already in the list, update its quantity
+        consolidatedList[key].qty += adjustedQty;
+    } else {
+        // If it's a new ingredient, create a copy with the adjusted quantity
+        consolidatedList[key] = {...ingredient, qty: adjustedQty};
+    }
+  })
 
     //convert object to an array set groceryList state
     const finalList= Object.values(consolidatedList)
@@ -99,7 +102,7 @@ function App() {
   return (
 <div className='listsDiv'>
       <div className='menuDiv'>
-       <ServingSizeSelect setServingSize={setServingSize} servingSize={servingSize} />
+       <ServingSizeSelect setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
       <button><span className="material-symbols-outlined">menu</span></button>
         <button><span className="material-symbols-outlined">picture_as_pdf</span></button>        
         <button><span className="material-symbols-outlined">share</span></button>

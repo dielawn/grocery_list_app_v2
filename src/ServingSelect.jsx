@@ -1,25 +1,31 @@
 import { useState, useEffect } from "react";
+import recipes from './recipes'
 
-export function ServingSizeSelect({setServingSize, servingSize, groceryList}) {
-    const [prevSize, setPrevSize] = useState(2)
+export function ServingSizeSelect({setServingSize, servingSize, groceryList, setGroceryList}) {
+
     const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     function handleChange(event) {
         setServingSize(Number(event.target.value))
-
     }
 
-    function adjustServingSize() {
-        //define ingredient.qty as baseQty
+    useEffect(() => {
+        if (groceryList.length > 0) {
+            const adjustedIngredients = recipes.flatMap(recipe => 
+                recipe.ingredients.map(ingredient => ({
+                    ...ingredient,
+                    qty: ingredient.qty * servingSize,
+                }))
+            )
+                
+            setGroceryList(adjustedIngredients)
+        } 
+    }, [servingSize])
     
-       }
-   
-useEffect(() => {
-  adjustServingSize()
-}, [servingSize])
+    
 
     return (
-        <select value={servingSize} onChange={handleChange}>
+        <select name="servingSelect" value={servingSize} onChange={handleChange}>
             {options.map(num => (
                 <option key={num} value={num}>{num}</option>
             ))}
