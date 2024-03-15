@@ -107,3 +107,10 @@
 .underLine {
   border-bottom: solid 2px rgba(104, 104, 104, 0.342);
 }
+
+.pdfLink {
+  background-color: black;
+  color: white;
+  padding: 20px 30px 20px 30px;
+  border-radius: 7px;
+}

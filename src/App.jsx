@@ -2,12 +2,14 @@ import './App.css'
 import { GroceryList } from './GroceryList'
 import { useEffect, useState } from 'react'
 import recipes from './recipes'
-import saveToLocalStorage from './localStorage'
+import { saveToLocalStorage, loadFromLocalStorage } from './localStorage'
 import { ServingSizeSelect } from './ServingSelect'
-import { SelectedRecipeList } from './RecipeList'
+import { SelectedRecipeList, RecipesList } from './RecipeList'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import { DownloadPDF } from './DownloadPDF'
+import { GeneratePDF } from './GeneratePDF'
 
-import { PDFDownloadLink } from '@react-pdf/renderer';
-import { GeneratePDF } from './GeneratePDF';
+
 
 function App() {
   const [groceryList, setGroceryList] = useState([]) 
@@ -30,7 +32,6 @@ function App() {
     }    
   }
   
-
   function addToRecipeList(newRecipe) {
     const newList = [...recipeList, newRecipe]
     setRecipeList(newList)
@@ -46,15 +47,14 @@ function App() {
         consolidatedList[key] = {...item}
     })
 
-    //add ingredient or update qty in consolidated list
     recipeIngredients.forEach(ingredient => {
       const key = `${ingredient.unit} ${ingredient.name}`
       const adjustedQty = ingredient.qty * servingSize
       if (key in consolidatedList) {
-        // If the ingredient is already in the list, update its quantity
+        //if the ingredient is already in the list, update its quantity
         consolidatedList[key].qty += adjustedQty;
     } else {
-        // If it's a new ingredient, create a copy with the adjusted quantity
+        //if it's a new ingredient, create a copy with the adjusted quantity
         consolidatedList[key] = {...ingredient, qty: adjustedQty};
     }
   })
@@ -63,10 +63,6 @@ function App() {
     const finalList= Object.values(consolidatedList)
     setGroceryList(finalList)
    }
-
-
-
-
 
    function addToLists(recipeIngredients, recipeName) {
     addAndConsolidate(recipeIngredients)
@@ -79,21 +75,11 @@ function App() {
     localStorage.clear()
    }
 
+  //check local history for a grocery list if so load it
    useEffect(() => {
     let loadedGroceryList = []
-    for (let i = 0; true; i++) {
-      const itemValue = localStorage.getItem(`ingredient${i}`)
-      if (!itemValue) break;
-      loadedGroceryList.push(JSON.parse(itemValue))
-    }
-
     let loadedRecipeList = []
-    for (let i = 0; true; i++) {
-      const itemValue = localStorage.getItem(`recipe${i}`)
-      if (!itemValue) break;
-      loadedRecipeList.push(JSON.parse(itemValue))
-    }
-
+    loadFromLocalStorage(loadedGroceryList, loadedRecipeList)
     if (loadedGroceryList.length > 0) setGroceryList(loadedGroceryList)
     if (loadedRecipeList.length > 0) setRecipeList(loadedRecipeList)
    }, [])
@@ -105,43 +91,28 @@ function App() {
 
   return (
 <div className='listsDiv'>
+
       <div className='navDiv'>
+
       <button onClick={() => toggleVis('menu')} className='menuBtn'><span className="material-symbols-outlined">menu</span></button>
+        
         {isMenuVis && <div className="menuDiv">
           <ServingSizeSelect  className='menuItem' setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
-          {groceryList.length > 0  && 
-            <PDFDownloadLink
-              document={<GeneratePDF groceryList={groceryList} recipeList={recipeList} />}
-              fileName="grocery-and-recipes.pdf">
-              {({ blob, url, loading, error }) =>
-                  loading ? 'Loading document...' : 'Download PDF!'
-              }
-            </PDFDownloadLink>
-          }
-          <button className='menuItem'><span className="material-symbols-outlined">share</span></button>
+          <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
+          <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
-        </div>           }    
+        </div>}    
+
       </div>
+
    {isRecipeListVis ? (
      <div className='recipeDiv'>
-     {recipes.map(recipe => (
-         <div key={recipe.name} className='recipeCard'>
-           
-            <h3>{recipe.name}</h3> 
-            {recipeList.map((item, index) => (
-               item === recipe.name ? <div key={index}>✅ in grocery list</div> : null
-             ))}           
-             <img className='recipeImg' src={recipe.image} alt={recipe.name} /><br></br>    
-                  
-             <button onClick={() => addToLists(recipe.ingredients, recipe.name)}>Add {recipe.name.length > 15 ? (`${recipe.name.slice(0, 15)}...`) : (recipe.name)}</button>
-             
-         </div>
-       ))}
+       <RecipesList addToLists={addToLists} recipeList={recipeList} />
      </div>
    ) : (
-    <div className='groceryListDiv'>
-      <SelectedRecipeList recipeList={recipeList} />
+    <div className='groceryListDiv'>      
     <GroceryList groceryList={groceryList} setGroceryList={setGroceryList} />
+    <SelectedRecipeList recipeList={recipeList} />
    </div>
    )}
 
