@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import recipes from './recipes'
 
-function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeyword }) {
+function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeyword}) {
     
     
-    function search() {
-        
+    function search() {        
 
         if (keyword === '') return;
         const prevMatches = [...matchingRecipes]
@@ -42,22 +41,8 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
     )
 }
 
-function DisplayMatches({matchingRecipes, addToLists}) {
-    return (
-        <>
-            {matchingRecipes.map((recipe, index) => (
-            <div key={index} className='recipeCard'>              
-               <h3>{recipe.name}</h3>                      
-                <img className='recipeImg' src={recipe.image} alt={recipe.name} /><br></br>                         
-                <button onClick={() => addToLists(recipe.ingredients, recipe.name)}>Add {recipe.name.length > 15 ? (`${recipe.name.slice(0, 15)}...`) : (recipe.name)}</button>
-                
-            </div>
-          ))}
-        </>
-    )
-}
 
 export {
     SearchRecipes,
-    DisplayMatches,
+    
 }

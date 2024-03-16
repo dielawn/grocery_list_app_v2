@@ -1,5 +1,5 @@
 import { useState } from "react";
-import recipes from './recipes'
+
 
 function SelectedRecipeList({recipeList}) {
 
@@ -13,10 +13,10 @@ function SelectedRecipeList({recipeList}) {
     )
 }
 
-function RecipesList({addToLists, recipeList}) {
+function RecipesList({addToLists, recipeList, list}) {
     return (
         <>
-         {recipes.map(recipe => (
+         {list.map(recipe => (
             <div key={recipe.name} className='recipeCard'>
               
                <h3>{recipe.name}</h3> 

@@ -5,7 +5,8 @@ import { saveToLocalStorage, loadFromLocalStorage } from './localStorage'
 import { ServingSizeSelect } from './ServingSelect'
 import { SelectedRecipeList, RecipesList } from './RecipeList'
 import { DownloadPDF } from './DownloadPDF'
-import { DisplayMatches, SearchRecipes } from './Search'
+import { SearchRecipes } from './Search'
+import recipes from './recipes'
 
 
 
@@ -110,11 +111,11 @@ function App() {
       {isRecipeListVis ? (
   matchingRecipes.length > 0 ? (
     <div className='recipeDiv'>
-    <DisplayMatches matchingRecipes={matchingRecipes} addToLists={addToLists} />
+    <RecipesList list={matchingRecipes} addToLists={addToLists} recipeList={recipeList} />
     </div>
   ) : (
     <div className='recipeDiv'>
-      <RecipesList addToLists={addToLists} recipeList={recipeList} />
+      <RecipesList addToLists={addToLists} recipeList={recipeList} list={recipes} />
     </div>
   )
 ) : (
