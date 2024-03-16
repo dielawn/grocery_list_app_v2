@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DownloadInstructions } from './DownloadInstructions'
 
 
 function SelectedRecipeList({recipeList}) {
@@ -26,7 +27,7 @@ function RecipesList({addToLists, recipeList, list}) {
     
     return (
         <>
-         {list.map((recipe) => (
+         {list.map((recipe, recipeIndex) => (
             <div key={recipe.name} className='recipeCard'>
               
                <h3>{recipe.name}</h3> 
@@ -48,6 +49,7 @@ function RecipesList({addToLists, recipeList, list}) {
                 </>
             )}               
                <button onClick={() => addToLists(recipe.ingredients, recipe.name)}>Add {recipe.name.length > 15 ? (`${recipe.name.slice(0, 15)}...`) : (recipe.name)}</button>
+                <DownloadInstructions recipe={recipe} index={recipeIndex} />
             </div>
           ))}
         </>
