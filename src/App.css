@@ -25,12 +25,17 @@
   overflow: scroll;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.968);
   border-radius: 10px;
+  min-height: 80vh;
+  padding: 0 20px 0 20px;
+}
+.groceryList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.txtPad {
+  padding: 0 20px 0 20px;
 }
 
 .flexColumn {
