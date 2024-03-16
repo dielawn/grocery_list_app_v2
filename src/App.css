@@ -29,11 +29,10 @@
 }
 [data-theme="dark"] {
   --background-color: #242424;
-  --background-color2:  #000000;
+  --background-color2:  #000000bf;
   --text-color:   rgba(151, 151, 151, 0.97);
   --box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.968);
 }
-
 
 .material-symbols-outlined {
   color: var(--text-color);
@@ -44,39 +43,22 @@
   'opsz' 24
 }
 
-.recipeImg {
-  width: 75%;  
-  max-height: 250px;
-  border-radius: 5px;
-}
-
-
 .recipeDiv {
   position: relative;
 }
 
 .groceryListDiv {
   position: relative; 
-  margin: 50px 50px 20px 50px;  
+  margin: 40px 40px 20px 40px;  
   overflow: scroll;
   box-shadow: var(--box-shadow);
   border-radius: 10px;
   min-height: 80vh;
   padding: 0 20px 0 20px;
 }
-.groceryList {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px 0 20px;
-}
 
-.txtPad {
+.txtPad { /* spacing for ingredient.name txt on grocery list */
   padding: 0 10px 0 10px;
-}
-
-.flexColumn {
-  display: flex;
-  flex-direction: column;
 }
 
 .navDiv {
@@ -97,32 +79,30 @@
   min-height: 300px;
 }
 
-.alignRight {
-  justify-content: right;
-  padding-right: 20px;
-}
-
-.alignLeft {
-  text-align: left;
-  width: 60%;
-  padding-left: 25px;
-}
-
-.visBtn {
-  position: fixed;
+.groceryRecipeTog {
+  position: fixed; 
   top: 0;
   right: 0;
-  margin: 15px 25px 0 0;
-  width: 90px;
-  height: 90px;
-  font-size: .9rem;
+  background-color:var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
-.menuBtn {
-  height: 50px;  
+.deleteBtn {
+  position: sticky;
+  bottom: 20px;
+  margin-left: 75%;
+  background-color:var(--background-color);
+  color: var(--text-color);
+}
+
+.menuBtn { 
   position: fixed;
   left: 0;
-  margin: 25px 0 0 25px;
+  margin: 15px 0 0 25px;
   background-color:var(--background-color);
   color: var(--text-color);
 }
@@ -136,71 +116,7 @@
   padding: 15px;
   background-color: var(--background-color);
 }
-.blackTxt {
-  color: black;
-}
 
-.underLine {
-  border-bottom: solid 2px rgba(104, 104, 104, 0.342);
-}
-
-.pdfLink {
-  background-color: transparent;
-  color: white;
-  padding: 10px 30px 20px 30px;
-  position: relative;
-  top: 50px;
-
-}
-
-.searchDiv {
-  padding: 25px 35px 0 0;
-}
-.searchInput {
-  width: 120px;
-  height: 25px;
-  border-radius: 7px;
-}
-
-.searchBtnsDiv {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 90px 0 90px;
-}
-
-.recipeCard {  
-  box-shadow: var(--box-shadow);
-  margin: 30px; 
-  padding: 15px;
-  border-radius: 10px;
-  height: fit-content;
-}
-
-.recipeCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* This aligns child elements vertically in the center */
-  justify-content: space-between; /* Adjusts the distribution of child elements */
-  position: relative;
-}
-
-.scrollLeft, .scrollRight {
-  background-color: transparent;
-  position: absolute;
-}
-
-.scrollLeft {
-  left: 0; /* Align to the left */
-  top: 45%;
-}
-
-.scrollRight {
-  right: 0; /* Align to the right */
-  top: 45%;
-}
-.servingSelect {
-  padding: 30px 30px 0 30px;
-}
 .pdfLink {
   background-color: transparent;
   color: white;
@@ -208,67 +124,58 @@
   position: relative;
   top: 0;
 }
+
+.searchDiv {
+  padding: 25px 35px 0 0;
+}
+
+
 .listMenu {
   display: flex;
   justify-content: center; 
 }
 
 .removeBtn {
- max-height: 50px;
+  max-height: 50px;
   padding: 20px 0 20px 0;
   background-color: transparent;
 }
 
 @media screen and (max-width: 400px) {
+
   .listMenu {
     flex-direction: column;
   }
+
   .servingSelect {
     padding: 30px 0 0 0;
   }
+
   .pdfLink {
     padding: 30px 0 0 0;
   }
-  .labelTxt{
-    font-size: .8rem;
-  }
+ 
 }
 
 @media screen and (max-width: 350px) {
-  :root {
-    font-size: .8rem;
-  }
+
+
+
   .listMenu {
     flex-direction: column;
   }
+
   .servingSelect {
     padding: 30px 25px 0 0;
   }
-  .visBtn {
-    margin: 15px 30px 0 0;
-    width: 75px;
-    height: fit-content;
-    font-size: .8rem;
-  }
-  .searchInput {
-    width: 100px;
-    height: 25px;
-    border-radius: 7px;
-  }
 
-  .recipeCard {     
-    margin: 30px; 
-    padding: 15px;
-    border-radius: 10px;
-    height: fit-content;
-    max-width: 325px;
+  .groceryRecipeTog {
+    margin: 15px 30px 0 0;
+   
   }
+  
   .recipeDiv {
     width: 99vw;
   }
-  .searchBtnsDiv {
-    display: flex;
-    width: 45vw;
-    justify-content: space-around;
-  }
+ 
 }

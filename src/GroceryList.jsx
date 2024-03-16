@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import './GroceryList.css'
 
 export function GroceryList({groceryList, setGroceryList}) {
 

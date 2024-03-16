@@ -1,3 +1,4 @@
+import './Search.css'
 import { useEffect, useState } from "react";
 import recipes from './recipes'
 
@@ -33,7 +34,8 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
 
     return (
         <div>
-            <label className="labelTxt" htmlFor="searchInput">Search:{' '} 
+            <label className="labelTxt" htmlFor="searchInput">
+                <span className="material-symbols-outlined">search</span>
                 <input 
                     id="searchInput"
                     className="searchInput"

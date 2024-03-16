@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import recipes from './recipes'
 import './ServingSelect.css'
+import { useState, useEffect } from "react";
 
 export function ServingSizeSelect({setServingSize, servingSize, groceryList, setGroceryList}) {
     const [prevServingSize, setPrevServingSize] = useState(servingSize)

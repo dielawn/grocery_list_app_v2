@@ -120,14 +120,14 @@ function App() {
 
       <div className='navDiv'>
 
-      <button onClick={() => toggleVis('menu')} className='menuBtn'><span className="material-symbols-outlined">menu</span></button>
+      <button onClick={() => toggleVis('menu')} className='menuBtn'><span className="material-symbols-outlined">settings</span></button>
         
         {isMenuVis && <div className="menuDiv">
          
-          <button onClick={toggleTheme} className='menuItem'><span className="material-symbols-outlined">dark_mode</span></button>
+          <button onClick={toggleTheme} className='menuItem'><span className="material-symbols-outlined">{theme === 'dark'? 'light_mode' : 'dark_mode'}</span></button>
 
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
-          <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
+          
           {/* <AisleSelect aisleOrder={aisleOrder} setAisleOrder={setAisleOrder} sortList={sortList}/> */}
         </div>}    
 
@@ -161,8 +161,8 @@ function App() {
 )}
 
 
-<button className='flex visBtn' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'Grocery List' : 'Recipes'} </button>
-
+<button className='flex groceryRecipeTog material-symbols-outlined' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'list' : 'grocery'} </button>
+{!isRecipeListVis && <button className='deleteBtn' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>}
     </div>
  
    

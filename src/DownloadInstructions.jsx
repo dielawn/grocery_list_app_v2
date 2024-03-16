@@ -1,5 +1,4 @@
-
-
+import './DownloadInstructions.css'
 export function DownloadInstructions({recipe, index}) {
 
     function extractName(recipe) {
