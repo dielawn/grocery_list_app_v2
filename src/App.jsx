@@ -99,14 +99,16 @@ function App() {
         
         {isMenuVis && <div className="menuDiv">
           <ServingSizeSelect  className='menuItem' setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
-          <SearchRecipes matchingRecipes={matchingRecipes} setMatchingRecipes={setMatchingRecipes} keyword={keyword} setKeyword={setKeyword}/>
+          <button className='menuItem'><span className="material-symbols-outlined">dark_mode</span></button>
           <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
         </div>}    
 
       </div>
-     
+     <div className='searchDiv'>
+     <SearchRecipes matchingRecipes={matchingRecipes} setMatchingRecipes={setMatchingRecipes} keyword={keyword} setKeyword={setKeyword}/>
+     </div>
 
       {isRecipeListVis ? (
   matchingRecipes.length > 0 ? (
