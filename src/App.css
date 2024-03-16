@@ -20,7 +20,7 @@
 
 .groceryListDiv {
   position: relative; 
-  top: 100px;
+  top: 50px;
   margin: 50px 50px 20px 50px;  
   overflow: scroll;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.968);
@@ -33,7 +33,10 @@
   justify-content: space-around;
 }
 
-
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
 
 .navDiv {
   position: fixed;
@@ -100,10 +103,12 @@
 }
 
 .pdfLink {
-  background-color: black;
+  background-color: transparent;
   color: white;
-  padding: 20px 30px 20px 30px;
-  border-radius: 7px;
+  padding: 10px 30px 20px 30px;
+  position: relative;
+  top: 50px;
+
 }
 
 .searchDiv {

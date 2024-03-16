@@ -4,7 +4,7 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 
 
 export const DownloadPDF = ({ groceryList, recipeList }) => {
-    
+    const text = 'Grocery List'
     return (
         <>
         {groceryList.length > 0  && 
@@ -12,7 +12,7 @@ export const DownloadPDF = ({ groceryList, recipeList }) => {
               document={<GeneratePDF groceryList={groceryList} recipeList={recipeList} />}
               fileName="grocery-and-recipes.pdf">
               {({ blob, url, loading, error }) =>
-                  loading ? 'Loading document...' : 'picture_as_pdf'
+                  loading ? 'Loading document...' : `download`
               }
             </PDFDownloadLink>
           }

@@ -3,6 +3,7 @@ import produce from './ingredients/produce.json';
 import grain from './ingredients/grains.json';
 import sauce from './ingredients/sauce.json';
 import neccessities from './ingredients/necessities.json';
+import costco from './ingredients/costco.json'
 import bakingGoods from './ingredients/baking.json';
 import cannedGoods from './ingredients/canned.json';
 import driedGoods from './ingredients/dried.json';
@@ -48,7 +49,7 @@ const recipes = [
     },
     {
         name: 'Costco',
-        ingredients: ['Toilet Paper', 'Paper Towels', ],
+        ingredients: [...costco ],
         image: './src/assets/costco-logo.png',
         instructions: './src/instructions/',
         link: ''

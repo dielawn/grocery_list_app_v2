@@ -111,7 +111,7 @@ function App() {
         {isMenuVis && <div className="menuDiv">
           <ServingSizeSelect  className='menuItem' setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
           <button className='menuItem'><span className="material-symbols-outlined">dark_mode</span></button>
-          <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
+          {/* <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} /> */}
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
           {/* <AisleSelect aisleOrder={aisleOrder} setAisleOrder={setAisleOrder} sortList={sortList}/> */}
@@ -121,6 +121,9 @@ function App() {
       {isRecipeListVis && <div className='searchDiv'>
      <SearchRecipes matchingRecipes={matchingRecipes} setMatchingRecipes={setMatchingRecipes} keyword={keyword} setKeyword={setKeyword}/>
      </div>}
+     {!isRecipeListVis && <div>
+      <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
+      </div>}
 
       {isRecipeListVis ? (
   matchingRecipes.length > 0 ? (

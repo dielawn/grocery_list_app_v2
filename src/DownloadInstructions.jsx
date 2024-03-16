@@ -10,6 +10,7 @@ export function DownloadInstructions({recipe, index}) {
     return (
         <div key={index}>
         <a 
+        className="flexColumn"
             href={recipe.instructions} 
             download={extractName(recipe) + ".pdf"}> 
             <span className="material-symbols-outlined">download </span> Instructions
