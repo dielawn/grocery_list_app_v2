@@ -9,10 +9,11 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
         if (keyword === '') return;
         const prevMatches = [...matchingRecipes]
         const newMatches = recipes.filter(recipe =>
-            Array.isArray(recipe.ingredients) && recipe.ingredients.some(item => item.name?.toLowerCase().includes(keyword.toLowerCase()))
+            recipe.name?.toLowerCase().includes(keyword.toLowerCase()) ||
+            (Array.isArray(recipe.ingredients) && recipe.ingredients.some(item => item.name?.toLowerCase().includes(keyword.toLowerCase())))
         )
+
         setMatchingRecipes([...prevMatches, ...newMatches.map(({ name, ingredients, image, instructions, link }) => ({ name, ingredients, image, instructions, link }))])
-    
     }
 
     useEffect(() => {
