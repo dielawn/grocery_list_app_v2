@@ -9,8 +9,6 @@ import { SearchRecipes } from './Search'
 import recipes from './recipes'
 import { AisleSelect } from './AisleSelect'
 
-
-
 function App() {
   const [groceryList, setGroceryList] = useState([]) 
   const [recipeList, setRecipeList] = useState([])
@@ -20,7 +18,7 @@ function App() {
   const [isRecipeListVis, setIsRecipeListVis] = useState(true)
   const [isMenuVis, setIsMenuVis] = useState(false)
   const [sortedGroceryList, setSortedGroceryList] = useState([])
-  const aisleOrder = ['dairy', 'freezer', 'cheese', 'snack', 'butcher', 'ethnic', 'noodle',  'canned', 'baking', 'cereal', 'condiment', 'bakery', 'produce', 'nutrition', '']
+  const [aisleOrder, setAisleOrder] =  useState(['dairy', 'freezer', 'cheese', 'snack', 'butcher', 'ethnic', 'noodle',  'canned', 'baking', 'cereal', 'condiment', 'bakery', 'produce', 'nutrition', ''])
 
   function toggleVis(el) {
     switch(el) {
@@ -86,7 +84,7 @@ function App() {
         return aIndex - bIndex
     })
     setSortedGroceryList(sortedList)
-}
+  }
 
   //check local history for a grocery list if so load it
    useEffect(() => {
@@ -97,13 +95,10 @@ function App() {
     if (loadedRecipeList.length > 0) setRecipeList(loadedRecipeList)
    }, [])
 
-
    useEffect(() => {
     saveToLocalStorage(groceryList, recipeList)
     sortList()
    }, [groceryList, recipeList])
-
-
 
   return (
 <div className='listsDiv'>
@@ -118,7 +113,7 @@ function App() {
           <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
-          <AisleSelect aisleOrder={aisleOrder} sortList={sortList}/>
+          {/* <AisleSelect aisleOrder={aisleOrder} setAisleOrder={setAisleOrder} sortList={sortList}/> */}
         </div>}    
 
       </div>

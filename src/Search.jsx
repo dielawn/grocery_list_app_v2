@@ -36,6 +36,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
             <label className="blkTxt" htmlFor="searchInput">Search:{' '} 
                 <input 
                     id="searchInput"
+                    className="searchInput"
                     value={keyword}
                     onChange={(e) => setKeyword(e.target.value)}
                     />
