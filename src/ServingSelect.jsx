@@ -12,17 +12,15 @@ export function ServingSizeSelect({setServingSize, servingSize, groceryList, set
 
     useEffect(() => {
         
-
         if (groceryList.length > 0) {
-            // Calculate the adjustment factor based on the new serving size relative to the default serving size
-            const adjustmentFactor = servingSize / prevServingSize;
-    
+            //calculate the adjustment factor based on the new serving size relative to the default serving size
+            const adjustmentFactor = servingSize / prevServingSize    
             const adjustedIngredients = groceryList.map(item => {
                 return {
                     ...item,
-                    // Adjust each item's qty by the adjustment factor
+                    //adjust each item's qty by the adjustment factor
                     qty: item.qty * adjustmentFactor,
-                };
+                }
             })
             setGroceryList(adjustedIngredients)
             setPrevServingSize(servingSize)

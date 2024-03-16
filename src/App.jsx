@@ -29,6 +29,10 @@ function App() {
       case 'list':
         setIsRecipeListVis(!isRecipeListVis)
         break;
+      case 'initialState':
+        setIsMenuVis(false)
+        setIsRecipeListVis(true)
+        break;
       default:
         setIsMenuVis(false)
         setIsRecipeListVis(true)
@@ -76,6 +80,8 @@ function App() {
     setGroceryList([])
     setRecipeList([])
     localStorage.clear()
+    toggleVis('initialState')
+
    }
 
    const sortList = () => {

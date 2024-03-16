@@ -11,42 +11,27 @@ import seasoning from './ingredients/seasoning.json';
 import dairy from './ingredients/dairy.json';
 import snack from './ingredients/snack.json';
 import frozenFood from './ingredients/frozen.json';
+import basics from './ingredients/basics.json'
 
 const recipes = [
-    { name: "Alison's Famous GF Cookies",
+    { name: "Store Basics",
     ingredients: [
-        ...grain.filter(item => item.name === "Quick Oats"),
+        ...basics,
+        ...grain.filter(item => item.name === "Quick Oats" || item.name === "Everything Bagel"),
         ...cannedGoods.filter(item => item.name === "Peanut Butter"),
-        ...dairy.filter(item => item.name === "Eggs"),
+        ...dairy.filter(item => item.name === "Eggs" || item.name === "Cream Cheese" || item.name === "Yogurt"),
         ...bakingGoods.filter(item => item.name === "Brown Sugar" || item.name === "Vanilla Extract" 
         || item.name === "Chocolate Chips" || item.name === "Baking Soda" || item.name === "Salt" 
         || item.name === "Cinnamon"),
-    ],
-    image: './src/assets/cookies.jpeg',
-    instructions:'./src/instructions/',
-    link: ''
-    },
-    { name: "Dielawn's Breakfast",
-    ingredients: [
-        ...dairy.filter(item => item.name === "Cream Cheese"),
-        ...grain.filter(item => item.name === "Everything Bagel"),
-        ...produce.filter(item => item.name === "Banana") 
-    ],
-    image: './src/assets/bagel-banana.jpeg',
-    instructions:'./src/instructions/',
-    link: ''
-    },
-    { name: "Alison's Breaksfast",
-    ingredients: [
-        ...produce.filter(item => item.name === "Spinach" || item.name === "Banana"),
+        ...produce.filter(item => item.name === "Spinach" || item.name === "Banana"), 
         ...driedGoods.filter(item => item.name === "Protein Powder"), 
-        ...dairy.filter(item => item.name === "Yogurt"), 
         ...frozenFood.filter(item => item.name === "Berries"),
     ],
-    image: './src/assets/breakfast-shake.jpeg',
+    image: './src/assets/general_store.jpg',
     instructions:'./src/instructions/',
     link: ''
     },
+    
     {
         name: 'Costco',
         ingredients: [...costco ],
