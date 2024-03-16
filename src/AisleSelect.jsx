@@ -1,11 +1,11 @@
 import './AisleSelect.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export function AisleSelect({ groceryList }) {
-    const defaultOrder = ['dairy', 'freezer', 'cheese', 'snack', 'butcher', 'ethnic', 'noodle',  'canned', 'baking', 'cereal', 'condiment', 'bakery', 'produce', 'nutrition', '']
-    const [aisleOrder, setAisleOrder] = useState(defaultOrder)
+export function AisleSelect({aisleOrder, sortList }) {
+    
     const [selectedAisle, setSelectedAisle] = useState('')
     const [selectedIndex, setSelectedIndex] = useState(0)
+ 
 
     const setAisle = (e) => {
         setSelectedAisle(e.target.value)
@@ -15,16 +15,10 @@ export function AisleSelect({ groceryList }) {
         setSelectedIndex(parseInt(e.target.value, 10))
     }
 
-    const updateAisleOrder = () => {
-        const newOrder = [...aisleOrder]
-        const currentIndex = newOrder.indexOf(selectedAisle)
-        if (currentIndex >= 0) {
-            newOrder.splice(currentIndex, 1)
-            newOrder.splice(selectedIndex, 0, selectedAisle)
-            setAisleOrder(newOrder)
-        }
-    }
    
+
+   
+
 
     return (
         <div>
@@ -38,7 +32,7 @@ export function AisleSelect({ groceryList }) {
                     <option key={index} value={index}>{index + 1}</option>
                 ))}
             </select>
-            <button onClick={updateAisleOrder}>Update Order</button>
+            <button onClick={() => sortList()}>Update Order</button>
         </div>
     )
 }

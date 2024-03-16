@@ -7,6 +7,7 @@ import { SelectedRecipeList, RecipesList } from './RecipeList'
 import { DownloadPDF } from './DownloadPDF'
 import { SearchRecipes } from './Search'
 import recipes from './recipes'
+import { AisleSelect } from './AisleSelect'
 
 
 
@@ -18,6 +19,8 @@ function App() {
   const [servingSize, setServingSize] = useState(2)
   const [isRecipeListVis, setIsRecipeListVis] = useState(true)
   const [isMenuVis, setIsMenuVis] = useState(false)
+  const [sortedGroceryList, setSortedGroceryList] = useState([])
+  const aisleOrder = ['dairy', 'freezer', 'cheese', 'snack', 'butcher', 'ethnic', 'noodle',  'canned', 'baking', 'cereal', 'condiment', 'bakery', 'produce', 'nutrition', '']
 
   function toggleVis(el) {
     switch(el) {
@@ -76,6 +79,15 @@ function App() {
     localStorage.clear()
    }
 
+   const sortList = () => {
+    const sortedList = [...groceryList].sort((a, b) => {
+        const aIndex = aisleOrder.indexOf(a.aisle)
+        const bIndex = aisleOrder.indexOf(b.aisle)
+        return aIndex - bIndex
+    })
+    setSortedGroceryList(sortedList)
+}
+
   //check local history for a grocery list if so load it
    useEffect(() => {
     let loadedGroceryList = []
@@ -88,7 +100,10 @@ function App() {
 
    useEffect(() => {
     saveToLocalStorage(groceryList, recipeList)
+    sortList()
    }, [groceryList, recipeList])
+
+
 
   return (
 <div className='listsDiv'>
@@ -103,12 +118,13 @@ function App() {
           <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
+          <AisleSelect aisleOrder={aisleOrder} sortList={sortList}/>
         </div>}    
 
       </div>
-     <div className='searchDiv'>
+      {isRecipeListVis && <div className='searchDiv'>
      <SearchRecipes matchingRecipes={matchingRecipes} setMatchingRecipes={setMatchingRecipes} keyword={keyword} setKeyword={setKeyword}/>
-     </div>
+     </div>}
 
       {isRecipeListVis ? (
   matchingRecipes.length > 0 ? (
@@ -122,7 +138,7 @@ function App() {
   )
 ) : (
   <div className='groceryListDiv'>      
-    <GroceryList groceryList={groceryList} setGroceryList={setGroceryList} />
+    <GroceryList groceryList={sortedGroceryList} setGroceryList={setGroceryList} />
     <SelectedRecipeList recipeList={recipeList} />
   </div>
 )}
