@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 .recipeImg {
@@ -10,9 +9,6 @@
   border-radius: 5px;
 }
 
-.listsDiv {
-  position: relative;
-}
 
 .recipeDiv {
   position: relative;
@@ -20,7 +16,6 @@
 
 .groceryListDiv {
   position: relative; 
-  top: 50px;
   margin: 50px 50px 20px 50px;  
   overflow: scroll;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.968);
@@ -160,4 +155,70 @@
 .scrollRight {
   right: 0; /* Align to the right */
   top: 45%;
+}
+.servingSelect {
+  padding: 30px 30px 0 30px;
+}
+.pdfLink {
+  background-color: transparent;
+  color: white;
+  padding: 30px 50px 0 30px;
+  position: relative;
+  top: 0;
+}
+.listMenu {
+  display: flex;
+  justify-content: center; 
+}
+
+.removeBtn {
+ max-height: 50px;
+  padding: 20px 0 20px 0;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 400px) {
+  .listMenu {
+    flex-direction: column;
+  }
+  .servingSelect {
+    padding: 30px 0 0 0;
+  }
+  .pdfLink {
+    padding: 30px 0 0 0;
+  }
+  .labelTxt{
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .listMenu {
+    flex-direction: column;
+  }
+  .servingSelect {
+    padding: 30px 25px 0 0;
+  }
+  .visBtn {
+    margin: 15px 50px 0 0;
+    width: 75px;
+    height: fit-content;
+    font-size: .8rem;
+  }
+  .searchInput {
+    width: 100px;
+    height: 25px;
+    border-radius: 7px;
+  }
+
+  .recipeCard {     
+    margin: 30px; 
+    padding: 15px;
+    border-radius: 10px;
+    height: fit-content;
+    max-width: 325px;
+  }
+  .recipeDiv {
+    width: 99vw;
+  }
 }

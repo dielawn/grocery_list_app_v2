@@ -33,7 +33,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
 
     return (
         <div>
-            <label className="blkTxt" htmlFor="searchInput">Search:{' '} 
+            <label className="labelTxt" htmlFor="searchInput">Search:{' '} 
                 <input 
                     id="searchInput"
                     className="searchInput"

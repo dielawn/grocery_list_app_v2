@@ -15,7 +15,7 @@ export function GroceryList({groceryList, setGroceryList}) {
                 <div  key={index} className='underLine groceryList'>
                     <p >{parseFloat(item.qty.toFixed(2))} {item.unit}</p>
                     <p className='txtPad'>{item.name}</p>
-                    <button onClick={() => removeItem(item.name)}>❌</button>
+                    <button className='removeBtn' onClick={() => removeItem(item.name)}>❌</button>
                 </div>
             ))}
         </div>

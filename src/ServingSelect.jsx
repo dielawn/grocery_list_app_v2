@@ -11,7 +11,7 @@ export function ServingSizeSelect({setServingSize, servingSize, groceryList, set
     }
 
     useEffect(() => {
-        
+
         if (groceryList.length > 0) {
             //calculate the adjustment factor based on the new serving size relative to the default serving size
             const adjustmentFactor = servingSize / prevServingSize    
@@ -30,7 +30,7 @@ export function ServingSizeSelect({setServingSize, servingSize, groceryList, set
     
 
     return (
-        <label className="blackTxt" htmlFor="servingSelect">Serving Size: 
+        <label className="servingSelect" htmlFor="servingSelect">Serving Size: {' '}
         <select id="servingSelect" value={servingSize} onChange={handleChange}>
             {options.map(num => (
                 <option key={num} value={num}>{num}</option>
