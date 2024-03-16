@@ -1,19 +1,19 @@
 import './App.css'
 import { GroceryList } from './GroceryList'
 import { useEffect, useState } from 'react'
-import recipes from './recipes'
 import { saveToLocalStorage, loadFromLocalStorage } from './localStorage'
 import { ServingSizeSelect } from './ServingSelect'
 import { SelectedRecipeList, RecipesList } from './RecipeList'
-import { PDFDownloadLink } from '@react-pdf/renderer'
 import { DownloadPDF } from './DownloadPDF'
-import { GeneratePDF } from './GeneratePDF'
+import { DisplayMatches, SearchRecipes } from './Search'
 
 
 
 function App() {
   const [groceryList, setGroceryList] = useState([]) 
   const [recipeList, setRecipeList] = useState([])
+  const [matchingRecipes, setMatchingRecipes] = useState([])
+  const [keyword, setKeyword] = useState('')
   const [servingSize, setServingSize] = useState(2)
   const [isRecipeListVis, setIsRecipeListVis] = useState(true)
   const [isMenuVis, setIsMenuVis] = useState(false)
@@ -98,23 +98,32 @@ function App() {
         
         {isMenuVis && <div className="menuDiv">
           <ServingSizeSelect  className='menuItem' setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
+          <SearchRecipes matchingRecipes={matchingRecipes} setMatchingRecipes={setMatchingRecipes} keyword={keyword} setKeyword={setKeyword}/>
           <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} />
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
         </div>}    
 
       </div>
+     
 
-   {isRecipeListVis ? (
-     <div className='recipeDiv'>
-       <RecipesList addToLists={addToLists} recipeList={recipeList} />
-     </div>
-   ) : (
-    <div className='groceryListDiv'>      
+      {isRecipeListVis ? (
+  matchingRecipes.length > 0 ? (
+    <div className='recipeDiv'>
+    <DisplayMatches matchingRecipes={matchingRecipes} addToLists={addToLists} />
+    </div>
+  ) : (
+    <div className='recipeDiv'>
+      <RecipesList addToLists={addToLists} recipeList={recipeList} />
+    </div>
+  )
+) : (
+  <div className='groceryListDiv'>      
     <GroceryList groceryList={groceryList} setGroceryList={setGroceryList} />
     <SelectedRecipeList recipeList={recipeList} />
-   </div>
-   )}
+  </div>
+)}
+
 
 <button className='flex visBtn' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'Grocery List' : 'Recipes'} </button>
 

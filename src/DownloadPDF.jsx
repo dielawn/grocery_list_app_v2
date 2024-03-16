@@ -5,8 +5,6 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 
 export const DownloadPDF = ({ groceryList, recipeList }) => {
     
-     
-
     return (
         <>
         {groceryList.length > 0  && 
