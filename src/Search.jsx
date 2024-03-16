@@ -1,20 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import recipes from './recipes'
 
 function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeyword }) {
     
     
     function search() {
-        setMatchingRecipes([])
+        
 
         if (keyword === '') return;
-        const prevMatches = [...matchingRecipes];
+        const prevMatches = [...matchingRecipes]
         const newMatches = recipes.filter(recipe =>
             Array.isArray(recipe.ingredients) && recipe.ingredients.some(item => item.name?.toLowerCase().includes(keyword.toLowerCase()))
         )
-        setMatchingRecipes([...prevMatches, ...newMatches.map(({ name, ingredients, image, instructions, link }) => ({ name, ingredients, image, instructions, link }))]);
+        setMatchingRecipes([...prevMatches, ...newMatches.map(({ name, ingredients, image, instructions, link }) => ({ name, ingredients, image, instructions, link }))])
     
     }
+
+    useEffect(() => {
+        setMatchingRecipes([])
+    }, [keyword])
 
     function handleClear() {
         setMatchingRecipes([])
