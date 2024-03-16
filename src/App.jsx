@@ -7,6 +7,7 @@ import { SelectedRecipeList, RecipesList } from './RecipeList'
 import { DownloadPDF } from './DownloadPDF'
 import { SearchRecipes } from './Search'
 import recipes from './recipes'
+import { useTheme } from './Theme'
 
 import { AisleSelect } from './AisleSelect'
 
@@ -20,6 +21,7 @@ function App() {
   const [isMenuVis, setIsMenuVis] = useState(false)
   const [sortedGroceryList, setSortedGroceryList] = useState([])
   const [aisleOrder, setAisleOrder] =  useState(['dairy', 'freezer', 'cheese', 'snack', 'butcher', 'ethnic', 'noodle',  'canned', 'baking', 'cereal', 'condiment', 'bakery', 'produce', 'nutrition', ''])
+  const { theme, toggleTheme } = useTheme()
 
   function toggleVis(el) {
     switch(el) {
@@ -107,7 +109,13 @@ function App() {
     sortList()
    }, [groceryList, recipeList])
 
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme);
+  }, [theme])
+
   return (
+   
+   
 <div className='listsDiv'>
 
       <div className='navDiv'>
@@ -116,8 +124,8 @@ function App() {
         
         {isMenuVis && <div className="menuDiv">
          
-          <button className='menuItem'><span className="material-symbols-outlined">dark_mode</span></button>
-          {/* <DownloadPDF className='menuItem' groceryList={groceryList} recipeList={recipeList} /> */}
+          <button onClick={toggleTheme} className='menuItem'><span className="material-symbols-outlined">dark_mode</span></button>
+
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           <button className='menuItem' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>
           {/* <AisleSelect aisleOrder={aisleOrder} setAisleOrder={setAisleOrder} sortList={sortList}/> */}
@@ -156,6 +164,9 @@ function App() {
 <button className='flex visBtn' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'Grocery List' : 'Recipes'} </button>
 
     </div>
+ 
+   
+   
   )
 }
 
