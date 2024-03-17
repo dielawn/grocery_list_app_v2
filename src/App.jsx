@@ -110,7 +110,8 @@ function App() {
    }, [groceryList, recipeList])
 
   useEffect(() => {
-    document.body.setAttribute('data-theme', theme);
+    toggleVis(!isMenuVis)
+    document.body.setAttribute('data-theme', theme)
   }, [theme])
 
   return (

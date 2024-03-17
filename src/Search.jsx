@@ -33,7 +33,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
     }
 
     return (
-        <div>
+        <div className='searchDiv'>
             <label className="labelTxt" htmlFor="searchInput">
                 <span className="material-symbols-outlined">search</span>
                 <input 
