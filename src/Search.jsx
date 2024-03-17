@@ -22,7 +22,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
         }
         setMatchingRecipes([...prevMatches, ...newMatches.map(({ name, ingredients, image, instructions, link }) => ({ name, ingredients, image, instructions, link }))])
     }
-
+//keywords 
     useEffect(() => {
         setMatchingRecipes([])
         setMessage('')
@@ -32,14 +32,6 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
         setMatchingRecipes([])
         setKeyword('')
         setMessage('')
-    }
-
-    function keywordMatch() {
-
-        const prevMatches = [...matchingRecipes]
-        const newMatches = recipes.keyword.map(word => word === keyword)
-        setMatchingRecipes([...prevMatches, ...newMatches.map(({ name, ingredients, image, instructions, link }) => ({ name, ingredients, image, instructions, link }))])
-
     }
 
     return (

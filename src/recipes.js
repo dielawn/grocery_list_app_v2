@@ -52,7 +52,7 @@ const recipes = [
     image: './src/assets/sweet-chili-pork-bowls.avif',
     instructions:'./src/instructions/sweet-chili-pork-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/sweet-chili-pork-bowls-5efb358e43975d50ea6927d2',
-    keyword: [],
+    keyword: ['asian'],
     },
     { name: 'One-Pan Cajun Pork Sausage Skillet',
     ingredients: [
@@ -62,14 +62,13 @@ const recipes = [
         ...grain.filter(item => item.name === "Jasmine Rice"),
         ...sauce.filter(item => item.name === "Chicken Stock Concentrate"),
         ...cannedGoods.filter(item => item.name === "Tomato Paste"),
-        ...driedGoods.filter(item => item.name === ""),
         ...seasoning.filter(item => item.name === "Cajun Spice Blend"),
         ...dairy.filter(item => item.name === "Monterey Jack Cheese" || item.name == "Sour Cream"),
         ],
     image: './src/assets/one-pan-cajun-pork-sausage-skillet.avif',
     instructions:'./src/instructions/one-pan-cajun-pork-sausage-skillet.pdf',
     link: 'https://www.hellofresh.com/recipes/one-pan-cajun-pork-sausage-skillet-61e6f0ac9853836f347a1f1d',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Pork Sausage and Bell Pepper Risotto',
     ingredients: [
@@ -84,7 +83,7 @@ const recipes = [
     image: './src/assets/pork-sausage-bell-pepper-risotto.avif',
     instructions:'./src/instructions/pork-sausage-bell-pepper-risotto.pdf',
     link: 'https://www.hellofresh.com/recipes/pork-sausage-bell-pepper-risotto-617041791f771a6a0b36e4b2',
-    keyword: [],
+    keyword: ['bowls'],
     },
     { name: 'Sesame Soy Pork Bowls',
     ingredients: [
@@ -97,9 +96,9 @@ const recipes = [
     image: './src/assets/sesame-soy-pork-bowl.avif',
     instructions:'./src/instructions/sesame-soy-pork-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/sesame-soy-pork-bowls-5fa06a5f20b9661c0d5e342f',
-    keyword: [],
+    keyword: ['asian'],
     },
-    { name: 'Yucatan Citrus Chicken Bowl',
+    { name: 'Yucatan Citrus Chicken Bowls',
     ingredients: [
         ...proteins.filter(item => item.name === "Chicken Breast Strips"),
         ...produce.filter(item => item.name === "Mandarin Orange" || item.name === "Lime"
@@ -112,7 +111,7 @@ const recipes = [
     image: './src/assets/yucatan-citrus-chicken-bowls.avif',
     instructions:'./src/instructions/yucatan-citrus-chicken-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/yucatan-citrus-chicken-bowls-621e8530b089c66fdb1a5599',
-    keyword: [],
+    keyword: ['mexican', ],
     },
     { name: 'Chimi Chicken & Yellow Rice Bowls',
     ingredients: [
@@ -126,9 +125,9 @@ const recipes = [
     image: './src/assets/chimi-chicken-yellow-rice-bowls.avif',
     instructions:'./src/instructions/chimi-chicken-yellow-rice-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/chimi-chicken-yellow-rice-bowls-5e5e9a73e0678c51867e16db',
-    keyword: [],
+    keyword: ['south american'],
     },
-    { name: 'Veggie Burrito Bowl',
+    { name: 'Veggie Burrito Bowls',
     ingredients: [
         ...produce.filter(item => item.name === "Yellow Onion" || item.name === "Roma Tomato" 
         || item.name === "Cilantro" || item.name === "Lime"),
@@ -142,7 +141,7 @@ const recipes = [
     image: './src/assets/veggie-burrito-bowl.avif',
     instructions:'./src/instructions/veggie-burrito-bowl.pdf',
     link: 'https://www.hellofresh.com/recipes/veggie-burrito-bowls-5e5ea67325ed1a2b107a3598',
-    keyword: [],
+    keyword: ['mexican', 'vegitarian'],
     },
     { name: 'Thai Basil Beef Bowls',
     ingredients: [
@@ -157,7 +156,7 @@ const recipes = [
     image: './src/assets/thai-basil-beef-bowls.avif',
     instructions:'./src/instructions/thai-basil-beef-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/thai-basil-beef-bowls-5e39b0b7055a3835f148531a',
-    keyword: [],
+    keyword: ['asian'],
     },
     { name: 'Chicken Sausage & Rice Skillet',
     ingredients: [
@@ -172,7 +171,7 @@ const recipes = [
     image: './src/assets/southwest-chicken-sausage-rice-skillet.avif',
     instructions:'./src/instructions/southwest-chicken-sausage-rice-skillet.pdf',
     link: 'https://www.hellofresh.com/recipes/southwest-chicken-sausage-rice-skillet-6076d3ba1b35831bb538d476',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Pork & Zucchini Bibimbap',
     ingredients: [
@@ -186,7 +185,7 @@ const recipes = [
     image: './src/assets/pork-and-veggie-bibimbap.avif',
     instructions:'./src/instructions/pork-and-veggie-bibimbap.pdf',
     link: 'https://www.hellofresh.com/recipes/pork-and-veggie-bibimbap-5e67d7511082fd2292725cfc',
-    keyword: [],
+    keyword: ['asian'],
     },
     { name: 'Teriyaki Pork Luau Bowls',
     ingredients:  [
@@ -199,7 +198,7 @@ const recipes = [
     image: './src/assets/teriyaki-pork-luau-bowls.avif',
     instructions:'./src/instructions/teriyaki-pork-luau-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/teriyaki-pork-luau-bowls-5fa56ef97511fc2549429dc0',
-    keyword: [],
+    keyword: ['asian'],
     },
     { name: 'Gouda Pork Burgers',
     ingredients:  [
@@ -214,7 +213,7 @@ const recipes = [
     image: './src/assets/gouda-pork-burgers.avif',
     instructions:'./src/instructions/gouda-pork-burgers.pdf',
     link: 'https://www.hellofresh.com/recipes/gouda-pork-burgers-5e838042d6f999558005b0da',
-    keyword: [],
+    keyword: ['american'],
     },
     
     { name: 'Firehouse Cheeseburgers',
@@ -230,7 +229,7 @@ const recipes = [
     image: './src/assets/firehouse-cheeseburgers.avif',
     instructions:'./src/instructions/firehouse-cheeseburgers.pdf',
     link: 'https://www.hellofresh.com/recipes/firehouse-cheeseburgers-609bd8375e0e4108d54ad302',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Melty Monterey Jack Burger',
     ingredients: [
@@ -244,7 +243,7 @@ const recipes = [
     image: './src/assets/melty-monterey-jack-burgers.avif',
     instructions:'./src/instructions/melty-monterey-jack-burgers.pdf',
     link: 'https://www.hellofresh.com/recipes/melty-monterey-jack-burgers-5e25f552b9721f76446c7585',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Ancho BBQ Sloppy Joes',
     ingredients: [
@@ -259,7 +258,7 @@ const recipes = [
     image: './src/assets/ancho-bbq-sloppy-joes.avif',
     instructions: './src/instructions/ancho-bbq-sloppy-joes.pdf',
     link: 'https://www.hellofresh.com/recipes/ancho-bbq-sloppy-joes-6231e882e5574621ea0c8d10',
-    keyword: [],
+    keyword: ['american'],
     },
     
     { name: 'Bacon Buckaroo Burger',
@@ -275,7 +274,7 @@ const recipes = [
     image: './src/assets/bacon-buckaroo-burger.avif',
     instructions:'./src/instructions/bacon-buckaroo-burgers.pdf',
     link: 'https://www.hellofresh.com/recipes/bacon-buckaroo-burgers-60f82814e088b95c6b25fb6e',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'White Cheddar Wonder Burger',
     ingredients:  [
@@ -290,7 +289,7 @@ const recipes = [
     image: './src/assets/white-cheddar-wonder-burger.avif',
     instructions:'./src/instructions/white-cheddar-wonderburgers.pdf',
     link: 'https://www.hellofresh.com/recipes/white-cheddar-wonderburgers-61cb23eb4547a11c25516b1e',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'BBQ Cheddar Burger',
     ingredients: [
@@ -304,7 +303,7 @@ const recipes = [
     image: './src/assets/bbq-cheddar-burgers.avif',
     instructions:'bbq-cheddar-burgers.pdf',
     link: 'https://www.hellofresh.com/recipes/bbq-cheddar-burgers-61f18805e6fc5466ef777d06',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Crispy Cajun Chicken Sandwiches',
     ingredients: [
@@ -319,9 +318,9 @@ const recipes = [
     image: './src/assets/crispy-cajun-chicken-sandwiches.avif',
     instructions:'./src/instructions/crispy-cajun-chicken-sandwiches.pdf',
     link: 'https://www.hellofresh.com/recipes/crispy-cajun-chicken-sandwiches-611d61d0ba10940c4d444561',
-    keyword: [],
+    keyword: ['american'],
     },
-    { name: 'BBQ Pineapple Flatbread',
+    { name: 'BBQ Pineapple Flatbreads',
     ingredients: [
         ...produce.filter(item => item.name === "Shallot" || item.name === "Cilantro"
         || item.name === "Poblano Pepper"),
@@ -333,7 +332,7 @@ const recipes = [
     image: './src/assets/bbq-pineapple-flatbread.avif',
     instructions:'./src/instructions/bbq-pineapple-flatbreads.pdf',
     link: 'https://www.hellofresh.com/recipes/bbq-pineapple-flatbreads-620c20eaaf420111a021e19a',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', ],
     },
     { name: 'Zucchini & Tomato Flatbreads',
     ingredients: [
@@ -347,7 +346,7 @@ const recipes = [
     image: './src/assets/zucchini-and-tomato-flatbreads.avif',
     instructions:'./src/instructions/zucchini-and-tomato-flatbreads.pdf',
     link: 'https://www.hellofresh.com/recipes/zucchini-and-tomato-flatbreads-5e67d93735c3537f181f43c8',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian',],
     },
     { name: 'Bacon Jalapeno Mac & Cheese',
     ingredients: [
@@ -363,7 +362,7 @@ const recipes = [
     image: './src/assets/bacon-jalapeno-mac-cheese.avif',
     instructions:'./src/instructions/bacon-jalapeno-mac-cheese.pdf',
     link: 'https://www.hellofresh.com/recipes/bacon-jalapeno-mac-cheese-615db9700ab39518157b909f',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Epic Nacho Mac & Cheese',
     ingredients: [
@@ -380,7 +379,7 @@ const recipes = [
     image: './src/assets/epic-nacho-mac-cheese.avif',
     instructions:'./src/instructions/epic-nacho-mac-cheese.pdf',
     link: 'https://www.hellofresh.com/recipes/epic-nacho-mac-n-cheese-6171950af588a0150a5570f4',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'american'],
     },
     { name: 'Sheet Pan Monterey Jack Chicken',
     ingredients: [
@@ -394,7 +393,7 @@ const recipes = [
     image: './src/assets/monterey-jack-un-fried-chicken.avif',
     instructions:'./src/instructions/monterey-jack-un-fried-chicken.pdf',
     link: 'https://www.hellofresh.com/recipes/monterey-jack-un-fried-chicken-61f9829bc37180194a54cb5b',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Bulgogi Pork Tenderloin',
     ingredients: [
@@ -409,7 +408,7 @@ const recipes = [
     image: './src/assets/bulgogi-pork-tenderloin.avif',
     instructions:'./src/instructions/bulgogi-pork-tenderloin.pdf',
     link: 'https://www.hellofresh.com/recipes/bulgogi-pork-tenderloin-61d4c2208a7a0c7c44733a7d',
-    keyword: [],
+    keyword: ['asian'],
     },
     { name: 'Honey Thyme Pork Tenderloin',
     ingredients: [
@@ -423,7 +422,7 @@ const recipes = [
     image: './src/assets/honey-thyme-pork-tenderloin.avif',
     instructions:'./src/instructions/honey-thyme-pork-tenderloin.pdf',
     link: 'https://www.hellofresh.com/recipes/honey-thyme-pork-tenderloin-615db8f220008b2e0307f097',
-    keyword: [],
+    keyword: ['american', 'fancy'],
     },
     { name: 'Peachy Keen BBQ-Rubbed Pork Chops',
     ingredients:  [
@@ -437,7 +436,7 @@ const recipes = [
     image: './src/assets/peachy-keen-bbq-rubbed-pork-chops.avif',
     instructions:'./src/instructions/peachy-keen-bbq-rubbed-pork-chops.pdf',
     link: 'https://www.hellofresh.com/recipes/peachy-keen-bbq-rubbed-pork-chops-61795d17951b0e24e516bead',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Steakhouse-Style Pork Chops',
     ingredients: [
@@ -451,7 +450,7 @@ const recipes = [
     image: './src/assets/steakhouse-pork-chops.avif',
     instructions:'./src/instructions/steakhouse-pork-chops.pdf',
     link: 'https://www.hellofresh.com/recipes/steakhouse-pork-chops-5ff4c5c85811d66eb9512c50',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Balsamic and Fig Beef Tenderloin',
     ingredients:  [
@@ -466,7 +465,7 @@ const recipes = [
     image: './src/assets/balsamic-fig-beef-tenderloin.avif',
     instructions:'./src/instructions/balsamic-fig-beef-tenderloin.pdf',
     link: 'https://www.hellofresh.com/recipes/balsamic-fig-beef-tenderloin-5f3aeb9bad6a05609c7d8cac',
-    keyword: [],
+    keyword: ['american', 'fancy'],
     },
     { name: 'Al Pastor Pulled Pork Tacos',
     ingredients: [
@@ -481,7 +480,7 @@ const recipes = [
     image: './src/assets/al-pastor-pulled-pork-tacos.avif',
     instructions:'./src/instructions/al-pastor-pulled-pork-tacos.pdf',
     link: 'https://www.hellofresh.com/recipes/al-pastor-pulled-pork-tacos-6239d8fa96d43a56f83be59f',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Cheesy Beef Tostadas',
     ingredients: [
@@ -496,9 +495,8 @@ const recipes = [
     image: './src/assets/cheesy-beef-tostadas.avif',
     instructions:'./src/instructions/cheesy-beef-tostadas.pdf',
     link: 'https://www.hellofresh.com/recipes/cheesy-beef-tostadas-5e94c0640d7f123476528c9e',
-    keyword: [],
-    },
-    
+    keyword: ['mexican'],
+    },    
     { name: 'Rio Rancho Pulled Pork Tacos',
     ingredients: [
         ...proteins.filter(item => item.name === "Pulled Pork"),
@@ -513,7 +511,7 @@ const recipes = [
     image: './src/assets/rio-rancho-pulled-pork-tacos.avif',
     instructions:'./src/instructions/rio-rancho-pulled-pork-tacos.pdf',
     link: 'https://www.hellofresh.com/recipes/rio-rancho-pulled-pork-tacos-5e5ce98d740b5917bc02d716',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Chicken Cheddar Fajitas',
     ingredients: [
@@ -527,7 +525,7 @@ const recipes = [
     image: './src/assets/chicken-cheddar-fajitas.avif',
     instructions:'./src/instructions/chicken-cheddar-fajitas.pdf',
     link: 'https://www.hellofresh.com/recipes/chicken-cheddar-fajitas-5de6cecef4d7307d823bb545',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Black Bean & Pepper Quesadillas',
     ingredients: [
@@ -542,7 +540,7 @@ const recipes = [
     image: './src/assets/black-bean-quesadillas.avif',
     instructions:'./src/instructions/black-bean-quesadillas.pdf',
     link: 'https://www.hellofresh.com/recipes/black-bean-quesadillas-5e94c48ee884b05a1c0e32c2',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'mexican'],
     },
     { name: 'One-Pan Pork Fajita Lettuce Wrap',
     ingredients: [
@@ -557,7 +555,7 @@ const recipes = [
     image: './src/assets/one-pan-pork-fajita-lettuce-cups.avif',
     instructions:'./src/instructions/one-pan-pork-fajita-lettuce-cups.pdf',
     link: 'https://www.hellofresh.com/recipes/one-pan-pork-fajita-lettuce-cups-6231f20c57fc3010631bb574',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Chicken Enchiladas Verdes',
     ingredients: [
@@ -571,7 +569,7 @@ const recipes = [
     image: './src/assets/salsa-verde-chicken-enchiladas.avif',
     instructions:'./src/instructions/salsa-verde-chicken-enchiladas.pdf',
     link: 'https://www.hellofresh.com/recipes/salsa-verde-chicken-enchiladas-5dfd0bae39b70a23332c4678',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Steak and Green Pepper Quesadillas',
     ingredients: [
@@ -586,7 +584,7 @@ const recipes = [
     image: './src/assets/steak-green-pepper-quesadillas.avif',
     instructions:'./src/instructions/steak-green-pepper-quesadillas.pdf',
     link: 'https://www.hellofresh.com/recipes/steak-green-pepper-quesadillas-5ea8310a56a9d32f9d717bc9',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Chicken Pineapple Qesadillas',
     ingredients: [
@@ -601,7 +599,7 @@ const recipes = [
     image: './src/assets/chicken-pineapple-quesadillas.avif',
     instructions:'./src/instructions/chicken-pineapple-quesadillas.pdf',
     link: 'https://www.hellofresh.com/recipes/chicken-pineapple-quesadillas-5e5026694cd03e416b3ebf93',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Mighty Mushroom Tortilla Melts',
     ingredients: [
@@ -616,7 +614,7 @@ const recipes = [
     image: './src/assets/mighty-mushroom-tortilla-melts.avif',
     instructions:'./src/instructions/mighty-mushroom-tortilla-melts.pdf',
     link: 'https://www.hellofresh.com/recipes/mighty-mushroom-tortilla-melts-6239d54bf2907366e348025e',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'mexican', 'american'],
     },
     { name: 'Pork & Poblano Tacos',
     ingredients: [
@@ -633,7 +631,7 @@ const recipes = [
     image: './src/assets/pork-and-poblano-tacos.avif',
     instructions:'./src/instructions/pork-and-poblano-tacos.pdf',
     link: 'https://www.hellofresh.com/recipes/pork-and-poblano-tacos-5d35c6b276961900177709c0',
-    keyword: [],
+    keyword: ['mexican'],
     },
     { name: 'Sweet Potato Fajitas',
     ingredients: [
@@ -647,7 +645,7 @@ const recipes = [
     image: './src/assets/sweet-potato-fajitas.avif',
     instructions:'./src/instructions/sweet-potato-fajitas.pdf',
     link: 'https://www.hellofresh.com/recipes/2018w50-r8-sweet-potato-fajitas-5c87e384c445fa032d20dc82',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'mexican'],
     },
     
     { name: 'Harissa Sweet Potato pockets',
@@ -662,7 +660,7 @@ const recipes = [
     image: './src/assets/harissa-sweet-potato-pita-pockets.avif',
     instructions:'./src/instructions/harissa-sweet-potato-pita-pockets.pdf',
     link: 'https://www.hellofresh.com/recipes/harissa-sweet-potato-pita-pockets-5f15dcd008c01b2af5444822',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'mediterranean'],
     },
     { name: 'Melty Double Red Pepper Panini',
     ingredients: [
@@ -677,7 +675,7 @@ const recipes = [
     image: './src/assets/double-red-pepper-panini.avif',
     instructions:'./src/instructions/double-red-pepper-panini.pdf',
     link: 'https://www.hellofresh.com/recipes/double-red-pepper-panini-6239d8a288ef2226660b2f87',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'sandwhich'],
     },
     { name: "Mushroom & Herb Shepherd's Pie",
     ingredients: [
@@ -692,7 +690,7 @@ const recipes = [
     image: './src/assets/mushroom-herb-shepherd-s-pie.avif',
     instructions:'./src/instructions/mushroom-herb-shepherd-s-pie.pdf',
     link: 'https://www.hellofresh.com/recipes/mushroom-herb-shepherd-s-pie-614b46bfcbfa3317d5247f22',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'irish'],
     },
     { name: 'One-Pot Beef & Black Bean Chili',
     ingredients: [
@@ -707,7 +705,7 @@ const recipes = [
     image: './src/assets/one-pot-beef-black-bean-chili.avif',
     instructions:'./src/instructions/one-pot-beef-black-bean-chili.pdf',
     link: 'https://www.hellofresh.com/recipes/one-pot-beef-black-bean-chili-5d76b40292f8cd000f15374a',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Chicken Garlic Parmesan Spaghetti',
     ingredients: [
@@ -720,7 +718,7 @@ const recipes = [
     image: './src/assets/chicken-over-garlic-parmesan-spaghetti.avif',
     instructions:'./src/instructions/chicken-over-garlic-parmesan-spaghetti.pdf',
     link: 'https://www.hellofresh.com/recipes/chicken-over-garlic-parmesan-spaghetti-60dc72a95854557dcb6bd5aa',
-    keyword: [],
+    keyword: ['italian'],
     },
     { name: 'Parmesan-Crusted Chicken',
     ingredients: [
@@ -737,7 +735,7 @@ const recipes = [
     image: './src/assets/parmesan-crusted-chicken.avif',
     instructions:'./src/instructions/parmesan-crusted-chicken.pdf',
     link: 'https://www.hellofresh.com/recipes/parmesan-crusted-chicken-5eb9ae9de88fa8571c5fbc7c',
-    keyword: [],
+    keyword: ['italian'],
     },
     { name: 'Balsamic Tomato & Herb Chicken',
     ingredients: [
@@ -752,7 +750,7 @@ const recipes = [
     image: './src/assets/balsamic-tomato-herb-chicken.avif',
     instructions:'./src/instructions/balsamic-tomato-herb-chicken.pdf',
     link: 'https://www.hellofresh.com/recipes/balsamic-tomato-herb-chicken-61b8a9de22509a6288133045',
-    keyword: [],
+    keyword: ['italian'],
     },
     { name: 'Creamy Parmesan Chicken Spaghetti',
     ingredients: [
@@ -767,7 +765,7 @@ const recipes = [
     image: './src/assets/creamy-parmesan-chicken-spaghetti.avif',
     instructions:'./src/instructions/creamy-parmesan-chicken-spaghetti.pdf',
     link: 'https://www.hellofresh.com/recipes/creamy-parmesan-chicken-spaghetti-5e430636195e8804526bc4e4',
-    keyword: [],
+    keyword: ['italian'],
     },
     { name: 'Chicken Parm Over Spaghetti',
     ingredients:  [
@@ -783,7 +781,7 @@ const recipes = [
     image: './src/assets/chicken-parm-over-spaghetti.avif',
     instructions:'./src/instructions/chicken-parm-over-spaghetti.pdf',
     link: 'https://www.hellofresh.com/recipes/chicken-parm-over-spaghetti-6076d40764e0061aa9040d7c',
-    keyword: [],
+    keyword: ['italian'],
     },
     { name: 'Sun-Dried Tomato Spaghetti',
     ingredients: [
@@ -797,7 +795,7 @@ const recipes = [
     image: './src/assets/sun-dried-tomato-spaghetti.avif',
     instructions:'./src/instructions/sun-dried-tomato-spaghetti.pdf',
     link: 'https://www.hellofresh.com/recipes/sun-dried-tomato-spaghetti-6231ef8d59a1d65a30536f97',
-    keyword: ['vegitarian'],
+    keyword: ['vegitarian', 'italian'],
     },
     { name: 'Homestyle Turkey & Biscuit Pot Pie',
     ingredients:  [
@@ -812,7 +810,7 @@ const recipes = [
     image: './src/assets/homestyle-chicken-biscuit-pot-pie.avif',
     instructions:'./src/instructions/homestyle-chicken-biscuit-pot-pie.pdf',
     link: 'https://www.hellofresh.com/recipes/homestyle-chicken-biscuit-pot-pie-5f049500d95a4007c84095f2',
-    keyword: [],
+    keyword: ['irish'],
     },
     
       { name: 'Italian Pepper Steak Sandos',
@@ -827,7 +825,7 @@ const recipes = [
     image: './src/assets/italian-pepper-steak-sandos.avif',
     instructions:'./src/instructions/italian-pepper-steak-sandos.pdf',
     link: 'https://www.hellofresh.com/recipes/italian-pepper-steak-sandos-60a51aaa87b4b26ba660cd65',
-    keyword: [],
+    keyword: ['sandwhich'],
     },
     
     { name: 'Roasted Veggie Farro Bowls',
@@ -858,7 +856,7 @@ const recipes = [
     image: './src/assets/crispy-chicken-legs-with-scallion-chimichurri.avif',
     instructions:'./src/instructions/crispy-chicken-legs-with-scallion-chimichurri.pdf',
     link: 'https://www.hellofresh.com/recipes/crispy-chicken-legs-with-scallion-chimichurri-5c0ad388c445fa4d4658a442',
-    keyword: [],
+    keyword: ['south american'],
     },
      { name: 'Beef Tenderloin with Brown Butter Roasted Veggies',
     ingredients: [
@@ -871,7 +869,7 @@ const recipes = [
     image: './src/assets/beef-tenderloin-with-brown-butter-roasted-veggies.avif',
     instructions:'./src/instructions/beef-tenderloin-with-brown-butter-roasted-veggies.pdf',
     link: 'https://www.hellofresh.com/recipes/beef-tenderloin-with-brown-butter-roasted-veggies-5cc214348aa674000c23a866',
-    keyword: [],
+    keyword: ['american', 'fancy'],
     },
         { name: 'Meatloaf A La Mom',
     ingredients: [
@@ -885,7 +883,7 @@ const recipes = [
     image: './src/assets/meatloaf-a-la-mom.avif',
     instructions:'./src/instructions/meatloaf-a-la-mom.pdf',
     link: 'https://www.hellofresh.com/recipes/meatloaf-a-la-mom-5dcc1589d610db313f50ad93',
-    keyword: [],
+    keyword: ['american'],
     },
         { name: "Crispy Frank's Redhot-spiced Chicken",
     ingredients: [
@@ -899,7 +897,7 @@ const recipes = [
     image: './src/assets/crispy-frank-s-redhot-spiced-chicken.avif',
     instructions:'./src/instructions/crispy-frank-s-redhot-spiced-chicken.pdf',
     link: 'https://www.hellofresh.com/recipes/crispy-frank-s-redhot-spiced-chicken-621e7ee970b6b932e5580751',
-    keyword: [],
+    keyword: ['american'],
     },
     { name: 'Veggie Chiles Rellenos',
     ingredients: [
@@ -914,7 +912,7 @@ const recipes = [
     image: './src/assets/veggie-chles-rellenos.avif',
     instructions:'./src/instructions/veggie-chles-rellenos.pdf',
     link: 'https://www.hellofresh.com/recipes/seven-grain-chiles-rellenos-5dc044c29ee326539e3c9ee1',
-    keyword: ['vegitarian', ],
+    keyword: ['vegitarian', 'mexican'],
     },
         { name: 'Tuscan Beef-Stuffed Peppers',
     ingredients: [
@@ -930,7 +928,7 @@ const recipes = [
     image: './src/assets/tuscan-beef-stuffed-peppers.avif',
     instructions:'./src/instructions/tuscan-beef-stuffed-peppers.pdf',
     link: 'https://www.hellofresh.com/recipes/tuscan-beef-stuffed-peppers-5dcb1a9b96d0db43857c2e9e',
-    keyword: ['skillet'],
+    keyword: ['skillet', 'mediterranian'],
     },
         { name: 'Cranberry-Thyme Roasted Chicken',
     ingredients: [
@@ -947,7 +945,7 @@ const recipes = [
     image: './src/assets/cranberry-thyme-roasted-chicken.avif',
     instructions:'./src/instructions/cranberry-thyme-roasted-chicken.pdf',
     link: 'https://www.hellofresh.com/recipes/cranberry-thyme-roasted-chicken-62fba391c9f137e2f905c824',
-    keyword: [],
+    keyword: ['american', 'fancy'],
     },
         { name: 'Figgy Balsamic Pork',
     ingredients: [
@@ -960,7 +958,7 @@ const recipes = [
     image: './src/assets/figgy-balsamic-pork.avif',
     instructions:'./src/instructions/figgy-balsamic-pork.pdf',
     link: 'https://www.hellofresh.com/recipes/figgy-balsamic-pork-5d2f8ee9f6202300124402dd',
-    keyword: [],
+    keyword: ['american', 'fancy'],
     },
     { name: 'Red Chili Chicken Enchiladas',
     ingredients: [
@@ -976,7 +974,7 @@ const recipes = [
     image: './src/assets/smothered-chicken-enchilada.avif',
     instructions:'./src/instructions/',
     link: '',
-    keyword: [],
+    keyword: ['mexican'],
     },
         { name: 'Pork & Pepper Enchiladas',
     ingredients: [
@@ -992,7 +990,7 @@ const recipes = [
     image: './src/assets/pork-and-pepper-enchiladas.avif',
     instructions:'./src/instructions/pork-pepper-enchiladas.pdf',
     link: 'https://www.hellofresh.com/recipes/pork-pepper-enchiladas-60e5b5669e7d845c2c2a3515',
-    keyword: [],
+    keyword: ['mexican'],
     },
 
         { name: 'Truffled Mushroom Flatbreads',
