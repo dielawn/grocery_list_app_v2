@@ -9,7 +9,7 @@
     { "name": "Dried Oregano", "qty": 0.5, "unit": "tsp", "aisle": "baking" },
     { "name": "Dried Thyme", "qty": 0.5, "unit": "tsp", "aisle": "baking" },
     { "name": "Fajita Spice Blend", "qty": 0.5, "unit": "TBSP", "aisle": "baking" },
-    { "name": "Frank's Seasoning", "qty": 0.5, "unit": "", "aisle": "baking" },
+    { "name": "Frank's RedHot Seasoning", "qty": 0.5, "unit": "", "aisle": "baking" },
     { "name": "Fry Seasoning", "qty": 0.5, "unit": "TBSP", "aisle": "baking" },
     { "name": "Garlic Powder", "qty": 0.5, "unit": "tsp", "aisle": "baking" },
     { "name": "Harissa Powder", "qty": 0.5, "unit": "TBSP", "aisle": "baking" },

@@ -1,7 +1,9 @@
 [
     { "name": "Balsamic Vinegar", "qty": 0.25, "unit": "oz", "aisle": "condiment" },
     { "name": "BBQ Sauce", "qty": 2, "unit": "TBSP", "aisle": "condiment" },
+    { "name": "Beef Demi-Glaze", "qty": 1, "unit": "oz", "aisle": "condiment" },
     { "name": "Beef Stock Concentrate", "qty": 1, "unit": "TBSP", "aisle": "canned" },
+    { "name": "Blue Cheese Dressing", "qty": 0.75, "unit": "oz", "aisle": "condiment" },
     { "name": "Bulgogi Sauce", "qty": 2, "unit": "oz", "aisle": "ethnic" },
     { "name": "Chicken Stock Concentrate", "qty": 1, "unit": "TBSP", "aisle": "canned" },
     { "name": "Dijon Mustard", "qty": 1, "unit": "tsp", "aisle": "condiment" },

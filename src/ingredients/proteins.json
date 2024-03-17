@@ -4,6 +4,7 @@
     { "name": "Chicken Breast", "qty": 6, "unit": "oz", "aisle": "butcher" },
     { "name": "Chicken Breast Strips", "qty": 5, "unit": "oz", "aisle": "butcher" },
     { "name": "Chicken Cutlets", "qty": 5, "unit": "oz", "aisle": "butcher" },
+    { "name": "Chicken Leg", "qty": 8, "unit": "oz", "aisle": "butcher" },
     { "name": "Diced Steak", "qty": 5, "unit": "oz", "aisle": "butcher" },
     { "name": "Ground Beef", "qty": 5, "unit": "oz", "aisle": "butcher" },
     { "name": "Ground Pork", "qty": 5, "unit": "oz", "aisle": "butcher" },

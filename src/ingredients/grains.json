@@ -1,9 +1,11 @@
 [
     { "name": "Arborio Rice", "qty": 0.5, "unit": "cup", "aisle": "ethnic" },
+    { "name": "Baguette", "qty": 1, "unit": "", "aisle": "bakery" },
     { "name": "Brioche Buns", "qty": 1, "unit": "Bun", "aisle": "bakery" },
     { "name": "Buttermilk Biscuits", "qty": 3, "unit": "oz", "aisle": "bakery" },
     { "name": "Cavatappi Pasta", "qty": 3, "unit": "oz", "aisle": "noodle" },
     { "name": "Everything Bagel", "qty": 1, "unit": "pack", "aisle": "bakery" },
+    { "name": "Farro", "qty": 0.5, "unit": "cup", "aisle": "noodle" },
     { "name": "Flatbreads", "qty": 1, "unit": "crust", "aisle": "bakery" },
     { "name": "Flour Tortillas", "qty": 3, "unit": "Tortilla", "aisle": "canned" },
     { "name": "Jasmine Rice", "qty": 0.5, "unit": "cup", "aisle": "ethnic" },
