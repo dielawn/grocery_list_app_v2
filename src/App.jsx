@@ -8,6 +8,7 @@ import { DownloadPDF } from './DownloadPDF'
 import { SearchRecipes } from './Search'
 import recipes from './recipes'
 import { useTheme } from './Theme'
+import ScrollToTopButton from './TopBtn.jsx'
 
 import { AisleSelect } from './AisleSelect'
 
@@ -22,6 +23,7 @@ function App() {
   const [sortedGroceryList, setSortedGroceryList] = useState([])
   const [aisleOrder, setAisleOrder] =  useState(['dairy', 'freezer', 'cheese', 'snack', 'butcher', 'ethnic', 'noodle',  'canned', 'baking', 'cereal', 'condiment', 'bakery', 'produce', 'nutrition', ''])
   const { theme, toggleTheme } = useTheme()
+  const [isTopBtnVis, setIsTopBtnVis] = useState(false)
 
   function toggleVis(el) {
     switch(el) {
@@ -40,6 +42,8 @@ function App() {
         setIsRecipeListVis(true)
     }    
   }
+  console.log(recipes.length)
+
   
   function addToRecipeList(newRecipe) {
     const newList = [...recipeList, newRecipe]
@@ -164,6 +168,9 @@ function App() {
 
 <button className='flex groceryRecipeTog material-symbols-outlined' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'list' : 'grocery'} </button>
 {!isRecipeListVis && <button className='deleteBtn' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>}
+    
+ <ScrollToTopButton />
+    
     </div>
  
    
