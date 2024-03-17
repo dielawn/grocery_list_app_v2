@@ -15,6 +15,7 @@
     { "name": "Chives", "qty": 0.125, "unit": "oz", "aisle": "produce" },
     { "name": "Cilantro", "qty": 0.125, "unit": "oz", "aisle": "produce" },
     { "name": "Coleslaw Mix", "qty": 2, "unit": "oz", "aisle": "produce" },
+    { "name": "Cremini Mushrooms", "qty": 4, "unit": "oz", "aisle": "produce" },
     { "name": "Cucumber", "qty": 0.5, "unit": "cucumber", "aisle": "produce" },
     { "name": "Dill", "qty": 0.125, "unit": "oz", "aisle": "produce" },
     { "name": "Garlic", "qty": 1, "unit": "Clove", "aisle": "produce" },

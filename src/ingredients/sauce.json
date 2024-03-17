@@ -28,6 +28,7 @@
     { "name": "Sweet Thai Chili Sauce", "qty": 0.5, "unit": "oz", "aisle": "ethnic" },
     { "name": "Teriyaki Sauce", "qty": 0.5, "unit": "", "aisle": "ethnic" },
     { "name": "Tex-Mex Paste", "qty": 0.5, "unit": "", "aisle": "ethnic" },
+    { "name": "Truffle Oil", "qty": 3, "unit": "tsp", "aisle": "condiment" },
     { "name": "Veggie Stock Concentrate", "qty": 1, "unit": "TBSP", "aisle": "canned" },
     { "name": "White Wine Vinegar", "qty": 2.5, "unit": "tsp", "aisle": "condiment" }
   ]
