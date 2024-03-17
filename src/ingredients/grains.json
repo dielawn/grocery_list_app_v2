@@ -4,6 +4,7 @@
     { "name": "Brioche Buns", "qty": 1, "unit": "Bun", "aisle": "bakery" },
     { "name": "Buttermilk Biscuits", "qty": 3, "unit": "oz", "aisle": "bakery" },
     { "name": "Cavatappi Pasta", "qty": 3, "unit": "oz", "aisle": "noodle" },
+    { "name": "Couscous", "qty": 0.25, "unit": "cup", "aisle": "noodle" },
     { "name": "Everything Bagel", "qty": 1, "unit": "pack", "aisle": "bakery" },
     { "name": "Farro", "qty": 0.5, "unit": "cup", "aisle": "noodle" },
     { "name": "Flatbreads", "qty": 1, "unit": "crust", "aisle": "bakery" },
@@ -13,6 +14,7 @@
     { "name": "Pita Bread", "qty": 1, "unit": "Bun", "aisle": "bakery" },
     { "name": "Quick Oats", "qty": 0.33, "unit": "cup", "aisle": "cereal" },
     { "name": "Sourdough Bread", "qty": 2, "unit": "slice", "aisle": "bakery" },
-    { "name": "Spaghetti", "qty": 3, "unit": "oz", "aisle": "canned" }
+    { "name": "Spaghetti", "qty": 3, "unit": "oz", "aisle": "canned" },
+    { "name": "Tempura Batter Mix", "qty": 41, "unit": "g", "aisle": "ethnic" }
   ]
   

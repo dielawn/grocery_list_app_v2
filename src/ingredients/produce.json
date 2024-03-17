@@ -12,6 +12,7 @@
     { "name": "Carrots", "qty": 0.5, "unit": "oz", "aisle": "produce" },
     { "name": "Celery", "qty": 1.25, "unit": "oz", "aisle": "produce" },
     { "name": "Chili Pepper", "qty": 0.5, "unit": "", "aisle": "produce" },
+    { "name": "Chives", "qty": 0.125, "unit": "oz", "aisle": "produce" },
     { "name": "Cilantro", "qty": 0.125, "unit": "oz", "aisle": "produce" },
     { "name": "Coleslaw Mix", "qty": 2, "unit": "oz", "aisle": "produce" },
     { "name": "Cucumber", "qty": 0.5, "unit": "cucumber", "aisle": "produce" },
