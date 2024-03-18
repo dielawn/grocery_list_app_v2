@@ -15,6 +15,7 @@
     { "name": "Quick Oats", "qty": 0.33, "unit": "cup", "aisle": "cereal" },
     { "name": "Sourdough Bread", "qty": 2, "unit": "slice", "aisle": "bakery" },
     { "name": "Spaghetti", "qty": 3, "unit": "oz", "aisle": "canned" },
-    { "name": "Tempura Batter Mix", "qty": 41, "unit": "g", "aisle": "ethnic" }
+    { "name": "Tempura Batter Mix", "qty": 41, "unit": "g", "aisle": "ethnic" },
+    { "name": "Thin Crust Pizza Dough", "qty": 4, "unit": "oz", "aisle": "freezer"}
   ]
   

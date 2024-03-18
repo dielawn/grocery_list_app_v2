@@ -8,6 +8,7 @@
     { "name": "Protein Powder", "qty": 0.25, "unit": "oz", "aisle": "nutrition" },
     { "name": "Sesame Seeds", "qty": 0.5, "unit": "TBSP", "aisle": "baking" },
     { "name": "Sliced Almonds", "qty": 0.25, "unit": "oz", "aisle": "baking" },
-    { "name": "Sun-Dried Tomatoes", "qty": 0.25, "unit": "oz", "aisle": "baking" }
+    { "name": "Sun-Dried Tomatoes", "qty": 0.25, "unit": "oz", "aisle": "baking"},
+    { "name": "Sun Flower Seeds", "qty": 0.25, "unit": "oz", "aisle": "snack" }
   ]
   
