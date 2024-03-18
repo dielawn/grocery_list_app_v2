@@ -165,8 +165,8 @@ function App() {
   </div>
 )}
 
+{recipeList.length > 0 && <button className='flex groceryRecipeTog material-symbols-outlined' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'list' : 'grocery'} </button>}
 
-<button className='flex groceryRecipeTog material-symbols-outlined' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'list' : 'grocery'} </button>
 {!isRecipeListVis && <button className='deleteBtn' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>}
     
  <ScrollToTopButton />
