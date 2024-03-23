@@ -2,7 +2,6 @@ import proteins from './ingredients/proteins.json';
 import produce from './ingredients/produce.json';
 import grain from './ingredients/grains.json';
 import sauce from './ingredients/sauce.json';
-import neccessities from './ingredients/necessities.json';
 import costco from './ingredients/costco.json'
 import bakingGoods from './ingredients/baking.json';
 import cannedGoods from './ingredients/canned.json';
@@ -19,13 +18,14 @@ const recipes = [
         ...basics,
         ...grain.filter(item => item.name === "Quick Oats" || item.name === "Everything Bagel"),
         ...cannedGoods.filter(item => item.name === "Peanut Butter"),
-        ...dairy.filter(item => item.name === "Eggs" || item.name === "Cream Cheese" || item.name === "Yogurt"),
+        ...dairy.filter(item => item.name === "Eggs" || item.name === "Cream Cheese" || item.name === "Yogurt" || item.name === "Sour Cream"),
         ...bakingGoods.filter(item => item.name === "Brown Sugar" || item.name === "Vanilla Extract" 
         || item.name === "Chocolate Chips" || item.name === "Baking Soda" || item.name === "Salt" 
         || item.name === "Cinnamon"),
         ...produce.filter(item => item.name === "Spinach" || item.name === "Banana"), 
         ...driedGoods.filter(item => item.name === "Protein Powder"), 
         ...frozenFood.filter(item => item.name === "Berries"),
+        ...snack,
     ],
     image: './src/assets/general_store.jpg',
     instructions:'./src/instructions/',
