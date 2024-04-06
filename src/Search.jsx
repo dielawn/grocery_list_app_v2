@@ -37,7 +37,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
     return (
         <div className='searchDiv'>
             <label className="labelTxt" htmlFor="searchInput">
-                <span className="material-symbols-outlined">search</span>
+               
                 <input 
                     id="searchInput"
                     className="searchInput"
@@ -46,7 +46,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
                     />
             </label>
             <div className="searchBtnsDiv">
-            <button onClick={() => search()}>Search</button>
+            <button onClick={() => search()}><span className='material-symbols-outlined'>search</span></button>
             <button onClick={() => handleClear()}>Clear</button>
             </div>
             <div>

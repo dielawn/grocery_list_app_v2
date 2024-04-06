@@ -141,7 +141,7 @@ const recipes = [
     image: '/images/veggie-burrito-bowl.avif',
     instructions:'./src/instructions/veggie-burrito-bowl.pdf',
     link: 'https://www.hellofresh.com/recipes/veggie-burrito-bowls-5e5ea67325ed1a2b107a3598',
-    keyword: ['mexican', 'vegitarian'],
+    keyword: ['mexican', 'vegetarian'],
     },
     { name: 'Thai Basil Beef Bowls',
     ingredients: [
@@ -332,7 +332,7 @@ const recipes = [
     image: '/images/bbq-pineapple-flatbread.avif',
     instructions:'./src/instructions/bbq-pineapple-flatbreads.pdf',
     link: 'https://www.hellofresh.com/recipes/bbq-pineapple-flatbreads-620c20eaaf420111a021e19a',
-    keyword: ['vegitarian', ],
+    keyword: ['vegetarian', ],
     },
     { name: 'Zucchini & Tomato Flatbreads',
     ingredients: [
@@ -346,7 +346,7 @@ const recipes = [
     image: '/images/zucchini-and-tomato-flatbreads.avif',
     instructions:'./src/instructions/zucchini-and-tomato-flatbreads.pdf',
     link: 'https://www.hellofresh.com/recipes/zucchini-and-tomato-flatbreads-5e67d93735c3537f181f43c8',
-    keyword: ['vegitarian',],
+    keyword: ['vegetarian',],
     },
     { name: 'Bacon Jalapeno Mac & Cheese',
     ingredients: [
@@ -379,7 +379,7 @@ const recipes = [
     image: '/images/epic-nacho-mac-cheese.avif',
     instructions:'./src/instructions/epic-nacho-mac-cheese.pdf',
     link: 'https://www.hellofresh.com/recipes/epic-nacho-mac-n-cheese-6171950af588a0150a5570f4',
-    keyword: ['vegitarian', 'american'],
+    keyword: ['vegetarian', 'american'],
     },
     { name: 'Sheet Pan Monterey Jack Chicken',
     ingredients: [
@@ -540,7 +540,7 @@ const recipes = [
     image: '/images/black-bean-quesadillas.avif',
     instructions:'./src/instructions/black-bean-quesadillas.pdf',
     link: 'https://www.hellofresh.com/recipes/black-bean-quesadillas-5e94c48ee884b05a1c0e32c2',
-    keyword: ['vegitarian', 'mexican'],
+    keyword: ['vegetarian', 'mexican'],
     },
     { name: 'One-Pan Pork Fajita Lettuce Wrap',
     ingredients: [
@@ -614,7 +614,7 @@ const recipes = [
     image: '/images/mighty-mushroom-tortilla-melts.avif',
     instructions:'./src/instructions/mighty-mushroom-tortilla-melts.pdf',
     link: 'https://www.hellofresh.com/recipes/mighty-mushroom-tortilla-melts-6239d54bf2907366e348025e',
-    keyword: ['vegitarian', 'mexican', 'american'],
+    keyword: ['vegetarian', 'mexican', 'american'],
     },
     { name: 'Pork & Poblano Tacos',
     ingredients: [
@@ -645,7 +645,7 @@ const recipes = [
     image: '/images/sweet-potato-fajitas.avif',
     instructions:'./src/instructions/sweet-potato-fajitas.pdf',
     link: 'https://www.hellofresh.com/recipes/2018w50-r8-sweet-potato-fajitas-5c87e384c445fa032d20dc82',
-    keyword: ['vegitarian', 'mexican'],
+    keyword: ['vegetarian', 'mexican'],
     },
     
     { name: 'Harissa Sweet Potato pockets',
@@ -660,7 +660,7 @@ const recipes = [
     image: '/images/harissa-sweet-potato-pita-pockets.avif',
     instructions:'./src/instructions/harissa-sweet-potato-pita-pockets.pdf',
     link: 'https://www.hellofresh.com/recipes/harissa-sweet-potato-pita-pockets-5f15dcd008c01b2af5444822',
-    keyword: ['vegitarian', 'mediterranean'],
+    keyword: ['vegetarian', 'mediterranean'],
     },
     { name: 'Melty Double Red Pepper Panini',
     ingredients: [
@@ -675,7 +675,7 @@ const recipes = [
     image: '/images/double-red-pepper-panini.avif',
     instructions:'./src/instructions/double-red-pepper-panini.pdf',
     link: 'https://www.hellofresh.com/recipes/double-red-pepper-panini-6239d8a288ef2226660b2f87',
-    keyword: ['vegitarian', 'sandwhich'],
+    keyword: ['vegetarian', 'sandwich'],
     },
     { name: "Mushroom & Herb Shepherd's Pie",
     ingredients: [
@@ -690,7 +690,7 @@ const recipes = [
     image: '/images/mushroom-herb-shepherd-s-pie.avif',
     instructions:'./src/instructions/mushroom-herb-shepherd-s-pie.pdf',
     link: 'https://www.hellofresh.com/recipes/mushroom-herb-shepherd-s-pie-614b46bfcbfa3317d5247f22',
-    keyword: ['vegitarian', 'irish'],
+    keyword: ['vegetarian', 'irish'],
     },
     { name: 'One-Pot Beef & Black Bean Chili',
     ingredients: [
@@ -795,7 +795,7 @@ const recipes = [
     image: '/images/sun-dried-tomato-spaghetti.avif',
     instructions:'./src/instructions/sun-dried-tomato-spaghetti.pdf',
     link: 'https://www.hellofresh.com/recipes/sun-dried-tomato-spaghetti-6231ef8d59a1d65a30536f97',
-    keyword: ['vegitarian', 'italian'],
+    keyword: ['vegetarian', 'italian'],
     },
     { name: 'Homestyle Turkey & Biscuit Pot Pie',
     ingredients:  [
@@ -825,7 +825,7 @@ const recipes = [
     image: '/images/italian-pepper-steak-sandos.avif',
     instructions:'./src/instructions/italian-pepper-steak-sandos.pdf',
     link: 'https://www.hellofresh.com/recipes/italian-pepper-steak-sandos-60a51aaa87b4b26ba660cd65',
-    keyword: ['sandwhich'],
+    keyword: ['sandwich'],
     },
     
     { name: 'Roasted Veggie Farro Bowls',
@@ -840,7 +840,7 @@ const recipes = [
     image: '/images/roasted-veggie-farro-bowls.avif',
     instructions:'./src/instructions/roasted-veggie-farro-bowls.pdf',
     link: 'https://www.hellofresh.com/recipes/roasted-veggie-farro-bowls-60eef03b2b8e1d36473eb0f6',
-    keyword: ['vegitarian'],
+    keyword: ['vegetarian'],
     },
      { name: 'Crispy Chicken Legs with Scallion Chimichurri',
     ingredients: [
@@ -912,7 +912,7 @@ const recipes = [
     image: '/images/veggie-chles-rellenos.avif',
     instructions:'./src/instructions/veggie-chles-rellenos.pdf',
     link: 'https://www.hellofresh.com/recipes/seven-grain-chiles-rellenos-5dc044c29ee326539e3c9ee1',
-    keyword: ['vegitarian', 'mexican'],
+    keyword: ['vegetarian', 'mexican'],
     },
         { name: 'Tuscan Beef-Stuffed Peppers',
     ingredients: [
@@ -1005,7 +1005,7 @@ const recipes = [
     image: '/images/truffled-mushroom-flatbread.avif',
     instructions:'./src/instructions/truffled-mushroom-flatbread.pdf',
     link: 'https://www.hellofresh.com/recipes/truffled-mushroom-flatbread-5cf148a58b02f000105e2832',
-    keyword: ['vegitarian'],
+    keyword: ['vegetarian'],
     },
         { name: 'Chicken Sausage & Roasted Garlic Flatbreads',
     ingredients: [
@@ -1048,7 +1048,7 @@ const recipes = [
     image: '/images/caramelized-apple-cheddar-melts.avif',
     instructions:'./src/instructions/caramelized-apple-cheddar-melts.pdf',
     link: 'https://www.hellofresh.com/recipes/caramelized-apple-cheddar-melts-5f69048d69aa6f3f5e056c1b',
-    keyword: ['vegitarian', 'sandwhich'],
+    keyword: ['vegetarian', 'sandwich'],
     },
      { name: 'Alpine Mushroom & Swiss Panini',
     ingredients: [
@@ -1063,7 +1063,7 @@ const recipes = [
     image: '/images/alpine-mushroom-and-swiss-panini.avif',
     instructions:'./src/instructions/alpine-mushroom-swiss-panini.pdf',
     link: 'https://www.hellofresh.com/recipes/alpine-mushroom-swiss-panini-624c45f02c9ce35144625f70',
-    keyword: ['vegitarian', 'sandwhich'],
+    keyword: ['vegetarian', 'sandwich'],
     },
       { name: 'Arthur Avenue Pork Sausage & Pepper Heroes',
     ingredients: [
@@ -1078,7 +1078,7 @@ const recipes = [
     image: '/images/arthur-avenue-pork-sausage-pepper-heroes.avif',
     instructions:'./src/instructions/arthur-ave-pork-sausage-pepper-heroes.pdf',
     link: 'https://www.hellofresh.com/recipes/arthur-ave-pork-sausage-pepper-heroes-621e83cfddee76569145993c',
-    keyword: ['sandwhich'],
+    keyword: ['sandwich'],
     },
        { name: 'Cheesy Spinach & Mushroom Stromboli',
     ingredients: [
@@ -1092,7 +1092,7 @@ const recipes = [
     image: '/images/cheesy-spinach-mushroom-stromboli.avif',
     instructions:'./src/instructions/cheesy-spinach-mushroom-stromboli.pdf',
     link: 'https://www.hellofresh.com/recipes/cheesy-spinach-mushroom-stromboli-6268c39c61b98c0208020680',
-    keyword: ['vegitarian','italian'],
+    keyword: ['vegetarian','italian'],
     },
     // { name: 'template',
     // ingredients: [

@@ -183,12 +183,29 @@
 
   .servingSelect {
     padding: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%);
+
   }
 
   .pdfLink {
     padding: 30px 0 0 0;
   }
- 
+  
+ .deleteBtn {
+  bottom: 20px;
+  left: 72vw;
+  margin: 0;
+ }
+
+ .groceryListDiv {
+  margin: 100px 40px 20px 40px;  
+ }
 }
 
 @media screen and (max-width: 350px) {

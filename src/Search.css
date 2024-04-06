@@ -28,13 +28,12 @@
 
 @media screen and (max-width: 350px) {
     .searchInput {
-        width: 100px;
+        width: 80px;
         height: 25px;
         border-radius: 7px;
       }
       .searchBtnsDiv {
         display: flex;
-        width: 45vw;
         justify-content: space-around;
       }
 }

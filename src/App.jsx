@@ -128,7 +128,7 @@ function App() {
       <button onClick={() => toggleVis('menu')} className='menuBtn'><span className="material-symbols-outlined">settings</span></button>
         
         {isMenuVis && <div className="menuDiv">
-         
+          <DownloadPDF groceryList={groceryList} recipeList={recipeList} />
           <button 
             onClick={toggleTheme} 
             className='menuItem'>
@@ -153,7 +153,7 @@ function App() {
      {!isRecipeListVis && 
       <div className='listMenu'>
         <ServingSizeSelect  setServingSize={setServingSize} servingSize={servingSize} groceryList={groceryList} setGroceryList={setGroceryList}/>
-        <DownloadPDF groceryList={groceryList} recipeList={recipeList} />
+       
         
       </div>
       }
