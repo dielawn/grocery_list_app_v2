@@ -10,7 +10,7 @@ export function GroceryList({groceryList, setGroceryList}) {
      
     return (
         <div >
-            <h3>Grocery List</h3>
+            <h3>Grocery List: {groceryList.length} items</h3>
             {groceryList.map((item, index) => (
                 <div  key={index} className='underLine groceryList'>
                     <p >{parseFloat(item.qty.toFixed(2))} {item.unit}</p>

@@ -129,7 +129,17 @@ function App() {
         
         {isMenuVis && <div className="menuDiv">
          
-          <button onClick={toggleTheme} className='menuItem'><span className="material-symbols-outlined">{theme === 'dark'? 'light_mode' : 'dark_mode'}</span></button>
+          <button 
+            onClick={toggleTheme} 
+            className='menuItem'>
+              <span className="material-symbols-outlined">
+                {theme === 'dark' ? 
+                  'light_mode' 
+                  : 
+                  'dark_mode'}
+              </span>
+          
+          </button>
 
           <button className='menuItem' onClick={() => alert('coming soon...')}><span className="material-symbols-outlined">share</span></button>
           
@@ -165,7 +175,11 @@ function App() {
   </div>
 )}
 
-{recipeList.length > 0 && <button className='flex groceryRecipeTog material-symbols-outlined' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'list' : 'grocery'} </button>}
+{recipeList.length > 0 && 
+ <>
+  <button className='flex groceryRecipeTog material-symbols-outlined' onClick={() => toggleVis('list')}>{isRecipeListVis ? 'list' : 'grocery'} </button>
+  <p className='recipeLength'>{recipeList.length}</p>
+ </>}
 
 {!isRecipeListVis && <button className='deleteBtn' onClick={() => deleteList()}><span className="material-symbols-outlined">delete</span></button>}
     
