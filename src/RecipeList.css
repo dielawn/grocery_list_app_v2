@@ -36,7 +36,7 @@
   .inListTxt {
     position: absolute;
     top: 35px;
-    right: 90px;
+    right: 50px;
   }
   @media screen and (max-width: 600px) {
     .recipeCard {
