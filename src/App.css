@@ -105,7 +105,6 @@
 .deleteBtn {
   position: sticky;
   bottom: 20px;
-  margin-left: 85%;
   background-color:var(--background-color);
   color: var(--text-color);
   display: flex;
@@ -175,6 +174,15 @@
   width: 25px;
   height: 25px;
 }
+
+@media screen and (max-width: 500px) {
+  .deleteBtn {
+    left: 69%;
+    margin: 0;
+    padding: 0;
+   }
+  
+}
 @media screen and (max-width: 400px) {
 
   .listMenu {
@@ -197,11 +205,6 @@
     padding: 30px 0 0 0;
   }
   
- .deleteBtn {
-  bottom: 20px;
-  left: 69%;
-  margin: 0;
- }
 
  .groceryListDiv {
   margin: 100px 40px 20px 40px;  
