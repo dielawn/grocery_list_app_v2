@@ -36,13 +36,12 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
 
     return (
         <div className='searchDiv'>
-            <label className="labelTxt" htmlFor="searchInput">
-               
+            <label className="labelTxt" htmlFor="searchInput">               
                 <input 
                     id="searchInput"
                     className="searchInput"
                     value={keyword}
-                    onChange={(e) => setKeyword(e.target.value)}
+                    onChange={(e) => setKeyword(e.target.value.trim().toLowerCase())}
                     />
             </label>
             <div className="searchBtnsDiv">
