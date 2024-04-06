@@ -33,7 +33,7 @@ function RecipesList({addToLists, recipeList, list}) {
               
                <h3>{recipe.name}</h3> 
                {recipeList.map((item, index) => (
-                  item === recipe.name ? <div key={index}>✅ in grocery list</div> : null
+                  item === recipe.name ? <div key={index} className='inListTxt'>✅</div> : null
                 ))}   
 
         {toggleStates[recipe.name] !== false ? (

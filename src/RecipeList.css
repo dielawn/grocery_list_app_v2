@@ -32,6 +32,12 @@
     right: 0; /* Align to the right */
     top: 45%;
   }
+
+  .inListTxt {
+    position: absolute;
+    top: 35px;
+    right: 90px;
+  }
   @media screen and (max-width: 600px) {
     .recipeCard {
         width: 500px;

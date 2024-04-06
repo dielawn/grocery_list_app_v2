@@ -1,6 +1,6 @@
 import './GroceryList.css'
 
-export function GroceryList({groceryList, setGroceryList}) {
+export function GroceryList({groceryList, setGroceryList, recipeList}) {
 
     function removeItem(itemName) {
         //create a new array excluding itemName
@@ -10,7 +10,7 @@ export function GroceryList({groceryList, setGroceryList}) {
      
     return (
         <div >
-            <h3>Grocery List: {groceryList.length} items</h3>
+            <h3>Grocery List: {groceryList.length} items {recipeList.length} Recipes.</h3>
             {groceryList.map((item, index) => (
                 <div  key={index} className='underLine groceryList'>
                     <p >{parseFloat(item.qty.toFixed(2))} {item.unit}</p>

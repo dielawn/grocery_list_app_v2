@@ -170,7 +170,7 @@ function App() {
   )
 ) : (
   <div className='groceryListDiv'>      
-    <GroceryList groceryList={sortedGroceryList} setGroceryList={setGroceryList} />
+    <GroceryList groceryList={sortedGroceryList} setGroceryList={setGroceryList} recipeList={recipeList} />
     <SelectedRecipeList recipeList={recipeList} />
   </div>
 )}
