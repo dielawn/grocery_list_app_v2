@@ -177,9 +177,9 @@
 
 @media screen and (max-width: 500px) {
   .deleteBtn {
-    left: 80%;
+    left: 87%;
     margin: 0;
-    padding: 0;
+   padding: 5px;
    }
   
 }
