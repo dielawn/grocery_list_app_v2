@@ -12,7 +12,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
         const newMatches = recipes.filter(recipe =>
             recipe.name?.toLowerCase().includes(keyword.toLowerCase()) ||
             (Array.isArray(recipe.ingredients) && recipe.ingredients.some(item => item.name?.toLowerCase().includes(keyword.toLowerCase()))) ||
-            (Array.isArray(recipe.keyword) && recipe.keyword.some(word => word.toLowerCase() === keyword.toLowerCase()))
+            (Array.isArray(recipe.keyword) && recipe.keyword.some(word => word.trim().toLowerCase() === keyword.toLowerCase()))
         )
         
         if (newMatches.length === 0) {
@@ -30,7 +30,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
 
     function handleClear() {
         setMatchingRecipes([])
-        setKeyword('')
+        handleKeyword('')
         setMessage('')
     }
 
@@ -41,7 +41,7 @@ function SearchRecipes({ matchingRecipes, setMatchingRecipes, keyword, setKeywor
                     id="searchInput"
                     className="searchInput"
                     value={keyword}
-                    onChange={(e) => setKeyword(e.target.value.trim().toLowerCase())}
+                    onChange={(e) => setKeyword(e.target.value)}
                     />
             </label>
             <div className="searchBtnsDiv">

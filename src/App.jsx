@@ -42,8 +42,7 @@ function App() {
         setIsRecipeListVis(true)
     }    
   }
-  console.log(recipes.length)
-
+  
   
   function addToRecipeList(newRecipe) {
     const newList = [...recipeList, newRecipe]
