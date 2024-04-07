@@ -13,7 +13,6 @@ function saveToLocalStorage(groceryList, recipeList) {
     recipeList.forEach((item, index) => {
         let itemKey = `recipe${index}`
         let itemValue = JSON.stringify(item)
-        console.log(`itemValue: ${itemValue}`)
         localStorage.setItem(itemKey, itemValue)
     })
 }
